@@ -18,7 +18,7 @@ tile_set = ExtResource("1_m4rtj")
 
 [node name="Walls" type="TileMapLayer" parent="Tiles" unique_id=1926392800]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAFAAAAAAADAAMAAAAFAAEAAAADAAQAAAAFAAIAAAADAAQAAAAFAAMAAAADAAUAAAAGAAMAAAAEAAAAAAAHAAMAAAAFAAAAAAA=")
+tile_map_data = PackedByteArray("AAAFAAAAAAADAAMAAAAFAAEAAAADAAQAAAAFAAIAAAADAAQAAAAFAAMAAAADAAUAAAAGAAMAAAAEAAAAAAAHAAMAAAAFAAAAAAAAAAcAAAADAAUAAAABAAcAAAAEAAIAAAACAAcAAAAEAAIAAAADAAcAAAAEAAIAAAAEAAcAAAAEAAIAAAAFAAcAAAAFAAIAAAA=")
 tile_set = ExtResource("1_m4rtj")
 
 [node name="WindowSizeReference" parent="." unique_id=1121091131 instance=ExtResource("2_yx5fw")]
@@ -35,5 +35,5 @@ position = Vector2(35, 59)
 connection_name = "test"
 
 [node name="ProjectileSpawner" parent="." unique_id=1439850339 instance=ExtResource("6_52hsn")]
-position = Vector2(114, 114)
+position = Vector2(120, 120)
 shoot_direction = 2

@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://di1gahmpg1yjh" path="res://systems/utils/position_wrapper_component.tscn" id="3_pu22i"]
 [ext_resource type="PackedScene" uid="uid://uuknvi3uxdyf" path="res://systems/damageables/hurtbox.tscn" id="4_ed0cs"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ed0cs"]
+radius = 3.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_bm5tb"]
 radius = 3.0
 
@@ -15,11 +18,9 @@ script = ExtResource("1_xdbd5")
 texture = ExtResource("2_xdbd5")
 
 [node name="ProjectileArea" type="Area2D" parent="." unique_id=489730620]
-collision_layer = 4
-collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectileArea" unique_id=1007291300]
-shape = SubResource("CircleShape2D_bm5tb")
+shape = SubResource("CircleShape2D_ed0cs")
 
 [node name="LifetimeTimer" type="Timer" parent="." unique_id=1625613948]
 wait_time = 20.0
@@ -31,4 +32,5 @@ wait_time = 20.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1708370493]
 shape = SubResource("CircleShape2D_bm5tb")
 
+[connection signal="body_entered" from="ProjectileArea" to="." method="_on_projectile_area_body_entered"]
 [connection signal="timeout" from="LifetimeTimer" to="." method="_on_lifetime_timer_timeout"]

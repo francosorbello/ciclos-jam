@@ -10,3 +10,7 @@ func _physics_process(delta):
 
 func _on_lifetime_timer_timeout() -> void:
 	queue_free()
+
+func _on_projectile_area_body_entered(_body: Node2D) -> void:
+	queue_free()
+	pass # Replace with function body.
