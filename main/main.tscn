@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://5qhqbxof8kqa"]
 
+[ext_resource type="PackedScene" uid="uid://dmp0wt0qvy7hx" path="res://ui/game_level_container.tscn" id="1_53q0u"]
 [ext_resource type="PackedScene" uid="uid://dxbkbv1hbwxk6" path="res://gyms/test_scene.tscn" id="1_p5fyt"]
+[ext_resource type="Script" uid="uid://230dg1h8njbc" path="res://main/main.gd" id="1_pjrb6"]
+[ext_resource type="PackedScene" uid="uid://ts0y0mhx8pyw" path="res://content/levels/rulo/test_level.tscn" id="2_pjrb6"]
 
 [node name="Main" type="Node" unique_id=1732081210]
+script = ExtResource("1_pjrb6")
+level_to_load = ExtResource("2_pjrb6")
+game_level_container = ExtResource("1_53q0u")
 
 [node name="Control" type="Control" parent="." unique_id=1055366783]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,6 +49,8 @@ handle_input_locally = false
 size = Vector2i(608, 608)
 size_2d_override = Vector2i(128, 128)
 size_2d_override_stretch = true
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="TestScene" parent="Control/SubViewportContainer/SubViewport" unique_id=1340159555 instance=ExtResource("1_p5fyt")]
+
+[node name="GameLevelContainer" parent="." unique_id=1359542513 instance=ExtResource("1_53q0u")]
