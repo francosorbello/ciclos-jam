@@ -2,7 +2,17 @@ extends Area2D
 
 @export var connection_name: String = ""
 
-var _disabled: bool = false
+@export var pushed_texture: Texture2D
+@export var up_texture: Texture2D
+
+var _disabled: bool = false:
+	set(new_value):
+		if new_value:
+			$Sprite2D.texture = pushed_texture
+		else:
+			$Sprite2D.texture = up_texture
+		_disabled = new_value
+		
 
 func _ready() -> void:
 	assert(connection_name != "", "No hay connection_name en "+name)

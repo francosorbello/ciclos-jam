@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d0qyskjvhx8j"]
 
 [ext_resource type="Script" uid="uid://cuddrbsbv5f7g" path="res://systems/player/player_sprite.gd" id="1_o6w4i"]
-[ext_resource type="Texture2D" uid="uid://cpe5x6jiw4kb8" path="res://systems/player/spaceman.png" id="1_su0ct"]
+[ext_resource type="Texture2D" uid="uid://dclng1rqrgcpb" path="res://content/art/Sprite_Player.png" id="2_xvx7f"]
 
 [sub_resource type="Animation" id="Animation_g1dw6"]
 length = 0.001
@@ -63,7 +63,7 @@ script = ExtResource("1_o6w4i")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=428727782]
 texture_filter = 1
-texture = ExtResource("1_su0ct")
+texture = ExtResource("2_xvx7f")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=91172233]
 libraries/ = SubResource("AnimationLibrary_su0ct")

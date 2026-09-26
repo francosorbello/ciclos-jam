@@ -1,20 +1,24 @@
 [gd_scene format=3 uid="uid://cgu1lxcm1xhde"]
 
 [ext_resource type="Script" uid="uid://crabadwmseiij" path="res://systems/button/button.gd" id="1_5fj13"]
-[ext_resource type="Texture2D" uid="uid://1tpyaugurv8" path="res://content/art/button.png" id="1_glb8a"]
+[ext_resource type="Texture2D" uid="uid://4jxjdcq1ry3c" path="res://content/art/Sprites_Button/Sprite_Button_1.png" id="2_5fj13"]
+[ext_resource type="Texture2D" uid="uid://bkfum2mokc7co" path="res://content/art/Sprites_Button/Sprite_Button_2.png" id="2_e3vty"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uvvs6"]
 radius = 8.062258
 
 [node name="Button" type="Area2D" unique_id=1798040680]
+texture_filter = 1
 script = ExtResource("1_5fj13")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=635761920]
-texture = ExtResource("1_glb8a")
+pushed_texture = ExtResource("2_e3vty")
+up_texture = ExtResource("2_5fj13")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=774722370]
 texture_filter = 1
 shape = SubResource("CircleShape2D_uvvs6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=635761920]
+texture = ExtResource("2_5fj13")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://ts0y0mhx8pyw"]
 
-[ext_resource type="TileSet" uid="uid://bh5i30lof53s8" path="res://content/art/greybox_tileset.tres" id="1_wm4rk"]
+[ext_resource type="TileSet" uid="uid://cv1l2ibsg57hh" path="res://content/art/grass_tileset.tres" id="1_m4rtj"]
 [ext_resource type="PackedScene" uid="uid://cter2nppyjf66" path="res://systems/utils/window_size_reference.tscn" id="2_yx5fw"]
 [ext_resource type="PackedScene" uid="uid://cgu1lxcm1xhde" path="res://systems/button/button.tscn" id="3_yx5fw"]
 [ext_resource type="PackedScene" uid="uid://dkx2yv2tvpu2b" path="res://systems/player/player.tscn" id="4_uh0j8"]
@@ -8,14 +8,22 @@
 
 [node name="TestLevel" type="Node2D" unique_id=364233370]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1926392800]
-tile_map_data = PackedByteArray("AAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAA=")
-tile_set = ExtResource("1_wm4rk")
+[node name="Tiles" type="Node2D" parent="." unique_id=2069997876]
+
+[node name="Floor" type="TileMapLayer" parent="Tiles" unique_id=1862876450]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAACAAUAAAAAAAEAAAACAAYAAAAAAAIAAAACAAcAAAAAAAMAAAADAAUAAAABAAEAAAADAAYAAAABAAIAAAADAAcAAAABAAMAAAAEAAUAAAACAAEAAAAEAAYAAAACAAIAAAAEAAcAAAACAAMAAAABAAcAAAACAAAAAAABAAYAAAAAAAAAAAABAAUAAAABAAAAAAAAAAUAAAACAAAAAAAAAAQAAAABAAAAAAAAAAYAAAABAAAAAAAAAAcAAAAAAAAAAAAAAAMAAAACAAAAAAABAAMAAAACAAAAAAABAAIAAAACAAMAAAABAAEAAAACAAEAAAAAAAAAAAABAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAABAAAAAAAEAAAAAAACAAAAAAAEAAEAAAABAAAAAAAEAAIAAAABAAAAAAADAAMAAAAAAAAAAAADAAQAAAABAAAAAAAEAAQAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAQAAAACAAAAAAAGAAUAAAACAAAAAAAFAAIAAAAAAAAAAAAFAAEAAAABAAAAAAAGAAEAAAAAAAEAAAAHAAEAAAABAAMAADAHAAIAAAABAAMAAAAHAAAAAAACAAAAAAAGAAAAAAAAAAAAAAAGAAIAAAAAAAMAAAAGAAMAAAABAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAABAAAAAAAHAAUAAAABAAAAAAAHAAYAAAABAAAAAAAHAAcAAAABAAAAAAAGAAcAAAACAAAAAAAGAAYAAAAAAAAAAAAFAAcAAAACAAAAAAAFAAYAAAAAAAAAAAAFAAUAAAACAAAAAAAFAAQAAAAAAAAAAAADAAIAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAADAAEAAAABAAAAAAACAAEAAAABAAAAAAABAAQAAAABAAAAAAAAAAIAAAABAAMAAAAAAAEAAAABAAEAAAACAAQAAAAAAAAAAAAFAAAAAAABAAAAAAA=")
+tile_set = ExtResource("1_m4rtj")
+
+[node name="Walls" type="TileMapLayer" parent="Tiles" unique_id=1926392800]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAFAAAAAAADAAMAAAAFAAEAAAADAAQAAAAFAAIAAAADAAQAAAAFAAMAAAADAAUAAAAGAAMAAAAEAAAAAAAHAAMAAAAFAAAAAAA=")
+tile_set = ExtResource("1_m4rtj")
 
 [node name="WindowSizeReference" parent="." unique_id=1121091131 instance=ExtResource("2_yx5fw")]
 
 [node name="Button" parent="." unique_id=1798040680 instance=ExtResource("3_yx5fw")]
-position = Vector2(110, 25)
+position = Vector2(115, 30)
 connection_name = "test"
 
 [node name="Player" parent="." unique_id=613483278 instance=ExtResource("4_uh0j8")]
