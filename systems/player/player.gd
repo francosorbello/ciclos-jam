@@ -23,3 +23,6 @@ func _handle_animation(dir_input: Vector2):
 		sprite.animate_by(dir_input)	
 
 	
+func _on_hitbox_on_hit() -> void:
+	queue_free()
+	GlobalSignal.restart_level_requested.emit()

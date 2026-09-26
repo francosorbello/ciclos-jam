@@ -3,8 +3,13 @@
 [ext_resource type="Script" uid="uid://be0ft1888fytk" path="res://systems/player/player.gd" id="1_rkbax"]
 [ext_resource type="PackedScene" uid="uid://d0qyskjvhx8j" path="res://systems/player/player_sprite.tscn" id="2_rkbax"]
 [ext_resource type="PackedScene" uid="uid://di1gahmpg1yjh" path="res://systems/utils/position_wrapper_component.tscn" id="3_fqfg4"]
+[ext_resource type="PackedScene" uid="uid://dvrkx8thfj7uf" path="res://systems/damageables/hitbox.tscn" id="4_q27vv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uvvs6"]
+radius = 7.0
+height = 16.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e4lrk"]
 radius = 7.0
 height = 16.0
 
@@ -18,3 +23,10 @@ shape = SubResource("CapsuleShape2D_uvvs6")
 [node name="PlayerSprite" parent="." unique_id=134553868 instance=ExtResource("2_rkbax")]
 
 [node name="PositionWrapperComponent" parent="." unique_id=1439856815 instance=ExtResource("3_fqfg4")]
+
+[node name="Hitbox" parent="." unique_id=980590889 instance=ExtResource("4_q27vv")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1803997671]
+shape = SubResource("CapsuleShape2D_e4lrk")
+
+[connection signal="on_hit" from="Hitbox" to="." method="_on_hitbox_on_hit"]
