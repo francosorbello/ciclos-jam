@@ -5,3 +5,4 @@ extends Node
 ##  you can call GlobalSignal.signal_name.connect() to connect to it
 ##  you can call GlobalSignal.signal_name.emit() to emit it
 
+signal restart_level_requested

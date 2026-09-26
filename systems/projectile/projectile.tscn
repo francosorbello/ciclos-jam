@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://brnbfn8tfx4o8"]
+
+[ext_resource type="Texture2D" uid="uid://bm6866b8ydds7" path="res://content/art/bullet.png" id="1_bm5tb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bm5tb"]
+radius = 5.0
+
+[node name="Projectile" type="Node2D" unique_id=1143106954]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=231563462]
+texture = ExtResource("1_bm5tb")
+
+[node name="ProjectileArea" type="Area2D" parent="." unique_id=489730620]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectileArea" unique_id=1007291300]
+shape = SubResource("CircleShape2D_bm5tb")

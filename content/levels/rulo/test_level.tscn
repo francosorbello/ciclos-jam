@@ -19,7 +19,7 @@ position = Vector2(110, 25)
 connection_name = "test"
 
 [node name="Player" parent="." unique_id=613483278 instance=ExtResource("4_uh0j8")]
-position = Vector2(11, 9)
+position = Vector2(58, 99)
 
 [node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("5_m4rtj")]
 position = Vector2(35, 59)

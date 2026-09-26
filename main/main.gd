@@ -8,8 +8,11 @@ var game_level_container_scene: Node
 
 var _current_creen: Node
 
+var _current_level: GameScreenResource
+
 func _ready() -> void:
 	transition_to(initial_screen_name.initial_screen_name)
+	GlobalSignal.restart_level_requested.connect(restart_current_level)
 
 func transition_to(level_name: String):
 	var screen := screens_container.get_by_name(level_name)
@@ -28,4 +31,8 @@ func transition_to_level(level: GameScreenResource):
 	add_child(_current_creen)
 	var _level_scene = level.scene.instantiate()
 	_current_creen.add_level(_level_scene)
-	
+	_current_level = level
+
+func restart_current_level():
+	if _current_level:
+		transition_to_level(_current_level)
