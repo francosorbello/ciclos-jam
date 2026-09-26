@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cter2nppyjf66" path="res://systems/utils/window_size_reference.tscn" id="2_yx5fw"]
 [ext_resource type="PackedScene" uid="uid://cgu1lxcm1xhde" path="res://systems/button/button.tscn" id="3_yx5fw"]
 [ext_resource type="PackedScene" uid="uid://dkx2yv2tvpu2b" path="res://systems/player/player.tscn" id="4_uh0j8"]
+[ext_resource type="PackedScene" uid="uid://d3aehi3y3q04k" path="res://systems/flag/flag.tscn" id="5_m4rtj"]
 
 [node name="TestLevel" type="Node2D" unique_id=364233370]
 
@@ -15,6 +16,11 @@ tile_set = ExtResource("1_wm4rk")
 
 [node name="Button" parent="." unique_id=1798040680 instance=ExtResource("3_yx5fw")]
 position = Vector2(110, 25)
+connection_name = "test"
 
 [node name="Player" parent="." unique_id=613483278 instance=ExtResource("4_uh0j8")]
 position = Vector2(11, 9)
+
+[node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("5_m4rtj")]
+position = Vector2(35, 59)
+connection_name = "test"

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d3aehi3y3q04k"]
+
+[ext_resource type="Script" uid="uid://dg7v0k441yknt" path="res://systems/flag/flag.gd" id="1_fs66n"]
+[ext_resource type="Texture2D" uid="uid://dlyhqtbk7saq2" path="res://content/art/flag.png" id="1_pdi53"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pdi53"]
+radius = 12.0415945
+
+[node name="Flag" type="Node2D" unique_id=1136091313]
+script = ExtResource("1_fs66n")
+
+[node name="FlagArea" type="Area2D" parent="." unique_id=1865096839]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FlagArea" unique_id=1439793032]
+shape = SubResource("CircleShape2D_pdi53")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1816724822]
+texture = ExtResource("1_pdi53")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[connection signal="body_entered" from="FlagArea" to="." method="_on_flag_area_body_entered"]
