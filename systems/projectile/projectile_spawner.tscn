@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://dvq7w43nna8f0" path="res://content/art/Sprites_Turrent/Sprite_TurretRight.png" id="3_hu4ns"]
 [ext_resource type="Texture2D" uid="uid://bxkhoada8kr3p" path="res://content/art/Sprites_Turrent/Sprite_TurretDown.png" id="4_0n1aa"]
 [ext_resource type="PackedScene" uid="uid://cxr37g7kjx4gx" path="res://systems/utils/interaction_toggle_component.tscn" id="6_0n1aa"]
+[ext_resource type="PackedScene" uid="uid://dvrkx8thfj7uf" path="res://systems/damageables/hitbox.tscn" id="7_tceqi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uvvs6"]
+radius = 4.0
 
 [node name="ProjectileSpawner" type="Node2D" unique_id=1439850339]
 texture_filter = 1
@@ -23,6 +27,20 @@ texture = ExtResource("4_0n1aa")
 [node name="SpawnIntervalTimer" type="Timer" parent="." unique_id=708535771]
 
 [node name="InteractionToggleComponent" parent="." unique_id=820501649 instance=ExtResource("6_0n1aa")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=159280943]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1789304287]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_uvvs6")
+
+[node name="Hitbox" parent="." unique_id=980590889 instance=ExtResource("7_tceqi")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=842291044]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_uvvs6")
 
 [connection signal="timeout" from="SpawnIntervalTimer" to="." method="_on_spawn_interval_timer_timeout"]
 [connection signal="disable" from="InteractionToggleComponent" to="." method="_on_interaction_toggle_component_disable"]

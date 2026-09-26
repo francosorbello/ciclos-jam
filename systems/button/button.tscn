@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bkfum2mokc7co" path="res://content/art/Sprites_Button/Sprite_Button_2.png" id="2_e3vty"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uvvs6"]
-radius = 8.062258
+radius = 6.0
 
 [node name="Button" type="Area2D" unique_id=1798040680]
 texture_filter = 1

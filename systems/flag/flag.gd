@@ -7,7 +7,6 @@ func _ready() -> void:
 
 func toggle_to(value: bool):
 	$FlagArea/CollisionShape2D.set_deferred("disabled", not value)
-	print(value)
 	var sprite: Sprite2D = $Sprite2D
 	if value:
 		sprite.region_rect.position.x = 0

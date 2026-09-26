@@ -5,7 +5,7 @@ var connection_name: String
 signal enable
 signal disable
 
-var _enabled: bool = true
+var _enabled: bool = false
 
 func _ready() -> void:
     GlobalEventSystem.suscribe(self, "_on_global_event")
@@ -13,9 +13,8 @@ func _ready() -> void:
 func _on_global_event(event: GlobalEventSystem.GameEvent, message: Dictionary):
     if event == GlobalEventSystem.GameEvent.GE_INTERACTION:
         if message.get("connection") == connection_name:
+            _enabled = not _enabled
             if _enabled:
                 enable.emit()
-                _enabled = false
             else:
                 disable.emit()
-                _enabled = false

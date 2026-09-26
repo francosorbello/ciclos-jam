@@ -38,3 +38,8 @@ connection_name = "test"
 position = Vector2(120, 120)
 shoot_direction = 2
 connection_name = "test"
+
+[node name="ProjectileSpawner2" parent="." unique_id=1623991705 instance=ExtResource("6_52hsn")]
+position = Vector2(120, 64)
+autostart = true
+connection_name = "test"
