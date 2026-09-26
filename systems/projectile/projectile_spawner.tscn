@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bs7lcp85pt6c6"]
+
+[ext_resource type="Script" uid="uid://dn2evxxva5x3s" path="res://systems/projectile/projectile_spawner.gd" id="1_k30jt"]
+[ext_resource type="PackedScene" uid="uid://brnbfn8tfx4o8" path="res://systems/projectile/projectile.tscn" id="2_84roy"]
+[ext_resource type="Texture2D" uid="uid://cykbys8t7y3gp" path="res://content/art/Sprites_Turrent/Sprite_TurretUp.png" id="3_5pbmk"]
+[ext_resource type="Texture2D" uid="uid://dvq7w43nna8f0" path="res://content/art/Sprites_Turrent/Sprite_TurretRight.png" id="3_hu4ns"]
+[ext_resource type="Texture2D" uid="uid://bxkhoada8kr3p" path="res://content/art/Sprites_Turrent/Sprite_TurretDown.png" id="4_0n1aa"]
+
+[node name="ProjectileSpawner" type="Node2D" unique_id=1439850339]
+texture_filter = 1
+script = ExtResource("1_k30jt")
+projectile_scene = ExtResource("2_84roy")
+shoot_direction = 1
+up_texture = ExtResource("3_5pbmk")
+down_texture = ExtResource("4_0n1aa")
+right_texture = ExtResource("3_hu4ns")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=670550216]
+texture = ExtResource("4_0n1aa")
+
+[node name="SpawnIntervalTimer" type="Timer" parent="." unique_id=708535771]
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=607992355]
+position = Vector2(0, -8)
+
+[connection signal="timeout" from="SpawnIntervalTimer" to="." method="_on_spawn_interval_timer_timeout"]

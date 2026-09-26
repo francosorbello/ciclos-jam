@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cgu1lxcm1xhde" path="res://systems/button/button.tscn" id="3_yx5fw"]
 [ext_resource type="PackedScene" uid="uid://dkx2yv2tvpu2b" path="res://systems/player/player.tscn" id="4_uh0j8"]
 [ext_resource type="PackedScene" uid="uid://d3aehi3y3q04k" path="res://systems/flag/flag.tscn" id="5_m4rtj"]
+[ext_resource type="PackedScene" uid="uid://bs7lcp85pt6c6" path="res://systems/projectile/projectile_spawner.tscn" id="6_52hsn"]
 
 [node name="TestLevel" type="Node2D" unique_id=364233370]
 
@@ -32,3 +33,7 @@ position = Vector2(58, 99)
 [node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("5_m4rtj")]
 position = Vector2(35, 59)
 connection_name = "test"
+
+[node name="ProjectileSpawner" parent="." unique_id=1439850339 instance=ExtResource("6_52hsn")]
+position = Vector2(114, 114)
+shoot_direction = 2

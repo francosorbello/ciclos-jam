@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://brnbfn8tfx4o8"]
 
-[ext_resource type="Texture2D" uid="uid://bm6866b8ydds7" path="res://content/art/bullet.png" id="1_bm5tb"]
+[ext_resource type="Script" uid="uid://c2aq5dgdm8guw" path="res://systems/projectile/projectile.gd" id="1_xdbd5"]
+[ext_resource type="Texture2D" uid="uid://yu8wmxnln0ml" path="res://content/art/Sprites_Turrent/Sprite_Bullet.png" id="2_xdbd5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bm5tb"]
 radius = 5.0
 
 [node name="Projectile" type="Node2D" unique_id=1143106954]
+script = ExtResource("1_xdbd5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=231563462]
-texture = ExtResource("1_bm5tb")
+texture = ExtResource("2_xdbd5")
 
 [node name="ProjectileArea" type="Area2D" parent="." unique_id=489730620]
 collision_layer = 4
@@ -16,3 +18,9 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectileArea" unique_id=1007291300]
 shape = SubResource("CircleShape2D_bm5tb")
+
+[node name="LifetimeTimer" type="Timer" parent="." unique_id=1625613948]
+wait_time = 20.0
+autostart = true
+
+[connection signal="timeout" from="LifetimeTimer" to="." method="_on_lifetime_timer_timeout"]
