@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cxr37g7kjx4gx"]
+
+[ext_resource type="Script" uid="uid://dkl41ev7wgwee" path="res://systems/utils/interaction_toggle_component.gd" id="1_nldof"]
+
+[node name="InteractionToggleComponent" type="Node" unique_id=820501649]
+script = ExtResource("1_nldof")

@@ -3,7 +3,7 @@ extends Node
 enum GameEvent
 {
     GE_DEFAULT,
-    GE_BUTTON_PRESSED
+    GE_INTERACTION,
 }
 
 enum ExecutionType

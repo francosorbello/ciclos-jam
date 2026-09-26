@@ -37,3 +37,4 @@ connection_name = "test"
 [node name="ProjectileSpawner" parent="." unique_id=1439850339 instance=ExtResource("6_52hsn")]
 position = Vector2(120, 120)
 shoot_direction = 2
+connection_name = "test"

@@ -22,6 +22,6 @@ func _on_flag_area_body_entered(body: Node2D) -> void:
 		toggle_to(false)
 
 func _on_global_event(event: GlobalEventSystem.GameEvent, message: Dictionary):
-	if event == GlobalEventSystem.GameEvent.GE_BUTTON_PRESSED:
+	if event == GlobalEventSystem.GameEvent.GE_INTERACTION:
 		if message.get("connection") == connection_name:
 			toggle()

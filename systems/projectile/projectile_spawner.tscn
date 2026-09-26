@@ -5,12 +5,14 @@
 [ext_resource type="Texture2D" uid="uid://cykbys8t7y3gp" path="res://content/art/Sprites_Turrent/Sprite_TurretUp.png" id="3_5pbmk"]
 [ext_resource type="Texture2D" uid="uid://dvq7w43nna8f0" path="res://content/art/Sprites_Turrent/Sprite_TurretRight.png" id="3_hu4ns"]
 [ext_resource type="Texture2D" uid="uid://bxkhoada8kr3p" path="res://content/art/Sprites_Turrent/Sprite_TurretDown.png" id="4_0n1aa"]
+[ext_resource type="PackedScene" uid="uid://cxr37g7kjx4gx" path="res://systems/utils/interaction_toggle_component.tscn" id="6_0n1aa"]
 
 [node name="ProjectileSpawner" type="Node2D" unique_id=1439850339]
 texture_filter = 1
 script = ExtResource("1_k30jt")
 projectile_scene = ExtResource("2_84roy")
 shoot_direction = 1
+autostart = null
 up_texture = ExtResource("3_5pbmk")
 down_texture = ExtResource("4_0n1aa")
 right_texture = ExtResource("3_hu4ns")
@@ -20,7 +22,8 @@ texture = ExtResource("4_0n1aa")
 
 [node name="SpawnIntervalTimer" type="Timer" parent="." unique_id=708535771]
 
-[node name="Marker2D" type="Marker2D" parent="." unique_id=607992355]
-position = Vector2(0, -8)
+[node name="InteractionToggleComponent" parent="." unique_id=820501649 instance=ExtResource("6_0n1aa")]
 
 [connection signal="timeout" from="SpawnIntervalTimer" to="." method="_on_spawn_interval_timer_timeout"]
+[connection signal="disable" from="InteractionToggleComponent" to="." method="_on_interaction_toggle_component_disable"]
+[connection signal="enable" from="InteractionToggleComponent" to="." method="_on_interaction_toggle_component_enable"]

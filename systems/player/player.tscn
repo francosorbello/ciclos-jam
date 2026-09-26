@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dvrkx8thfj7uf" path="res://systems/damageables/hitbox.tscn" id="4_q27vv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uvvs6"]
-radius = 7.0
-height = 16.0
+radius = 4.0
+height = 8.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e4lrk"]
 radius = 7.0
@@ -19,16 +19,18 @@ collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_rkbax")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=938325746]
-shape = SubResource("CapsuleShape2D_uvvs6")
-
 [node name="PlayerSprite" parent="." unique_id=134553868 instance=ExtResource("2_rkbax")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=938325746]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_uvvs6")
 
 [node name="PositionWrapperComponent" parent="." unique_id=1439856815 instance=ExtResource("3_fqfg4")]
 
 [node name="Hitbox" parent="." unique_id=980590889 instance=ExtResource("4_q27vv")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1803997671]
+visible = false
 shape = SubResource("CapsuleShape2D_e4lrk")
 
 [connection signal="on_hit" from="Hitbox" to="." method="_on_hitbox_on_hit"]

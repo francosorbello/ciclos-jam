@@ -21,7 +21,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if _disabled:
 		return
 	if body is APlayer:
-		GlobalEventSystem.emit(GlobalEventSystem.GameEvent.GE_BUTTON_PRESSED, {"connection": connection_name})
+		GlobalEventSystem.emit(GlobalEventSystem.GameEvent.GE_INTERACTION, {"connection": connection_name})
 		_disabled = true
 
 
