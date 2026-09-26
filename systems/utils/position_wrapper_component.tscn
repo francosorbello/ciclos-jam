@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://di1gahmpg1yjh"]
+
+[ext_resource type="Script" uid="uid://dbfwkmico2thq" path="res://systems/utils/position_wrapper_component.gd" id="1_imh40"]
+
+[node name="PositionWrapperComponent" type="Node" unique_id=1439856815]
+script = ExtResource("1_imh40")

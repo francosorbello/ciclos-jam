@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c2aq5dgdm8guw" path="res://systems/projectile/projectile.gd" id="1_xdbd5"]
 [ext_resource type="Texture2D" uid="uid://yu8wmxnln0ml" path="res://content/art/Sprites_Turrent/Sprite_Bullet.png" id="2_xdbd5"]
+[ext_resource type="PackedScene" uid="uid://di1gahmpg1yjh" path="res://systems/utils/position_wrapper_component.tscn" id="3_pu22i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bm5tb"]
 radius = 5.0
@@ -21,6 +22,7 @@ shape = SubResource("CircleShape2D_bm5tb")
 
 [node name="LifetimeTimer" type="Timer" parent="." unique_id=1625613948]
 wait_time = 20.0
-autostart = true
+
+[node name="PositionWrapperComponent" parent="." unique_id=1439856815 instance=ExtResource("3_pu22i")]
 
 [connection signal="timeout" from="LifetimeTimer" to="." method="_on_lifetime_timer_timeout"]
