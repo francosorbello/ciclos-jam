@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://cter2nppyjf66"]
 
 [node name="WindowSizeReference" type="ReferenceRect" unique_id=1121091131]
-offset_right = 600.0
-offset_bottom = 600.0
-border_width = 2.9
+offset_right = 128.0
+offset_bottom = 128.0

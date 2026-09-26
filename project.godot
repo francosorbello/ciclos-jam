@@ -55,6 +55,11 @@ move_right={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Wall"
+2d_physics/layer_2="BulletWall"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

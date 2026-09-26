@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://d0qyskjvhx8j" path="res://player/player_sprite.tscn" id="2_rkbax"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uvvs6"]
-radius = 26.0
-height = 64.0
+radius = 7.0
+height = 16.0
 
 [node name="Player" type="CharacterBody2D" unique_id=613483278]
 motion_mode = 1
@@ -14,13 +14,4 @@ script = ExtResource("1_rkbax")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=938325746]
 shape = SubResource("CapsuleShape2D_uvvs6")
 
-[node name="TopRight" parent="." unique_id=134553868 instance=ExtResource("2_rkbax")]
-
-[node name="TopLeft" parent="." unique_id=1772338161 instance=ExtResource("2_rkbax")]
-position = Vector2(-600, 0)
-
-[node name="DownLeft" parent="." unique_id=1944354686 instance=ExtResource("2_rkbax")]
-position = Vector2(-600, 600)
-
-[node name="DownRight" parent="." unique_id=1216706921 instance=ExtResource("2_rkbax")]
-position = Vector2(0, 600)
+[node name="PlayerSprite" parent="." unique_id=134553868 instance=ExtResource("2_rkbax")]
