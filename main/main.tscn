@@ -1,56 +1,12 @@
 [gd_scene format=3 uid="uid://5qhqbxof8kqa"]
 
 [ext_resource type="PackedScene" uid="uid://dmp0wt0qvy7hx" path="res://ui/game_level_container.tscn" id="1_53q0u"]
-[ext_resource type="PackedScene" uid="uid://dxbkbv1hbwxk6" path="res://gyms/test_scene.tscn" id="1_p5fyt"]
 [ext_resource type="Script" uid="uid://230dg1h8njbc" path="res://main/main.gd" id="1_pjrb6"]
-[ext_resource type="PackedScene" uid="uid://ts0y0mhx8pyw" path="res://content/levels/rulo/test_level.tscn" id="2_pjrb6"]
+[ext_resource type="Resource" uid="uid://bss1rlawvphvy" path="res://content/screen_res/screen_container.tres" id="2_c651c"]
+[ext_resource type="Resource" uid="uid://5t3006hr6qkc" path="res://content/screen_res/initial_screen.tres" id="4_3wy1v"]
 
 [node name="Main" type="Node" unique_id=1732081210]
 script = ExtResource("1_pjrb6")
-level_to_load = ExtResource("2_pjrb6")
+screens_container = ExtResource("2_c651c")
 game_level_container = ExtResource("1_53q0u")
-
-[node name="Control" type="Control" parent="." unique_id=1055366783]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="Control" unique_id=186886971]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.36810192, 0.36810198, 0.36810192, 1)
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Control" unique_id=1972747366]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -300.0
-offset_top = -300.0
-offset_right = 308.0
-offset_bottom = 308.0
-grow_horizontal = 2
-grow_vertical = 2
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer" unique_id=1650845577]
-handle_input_locally = false
-size = Vector2i(608, 608)
-size_2d_override = Vector2i(128, 128)
-size_2d_override_stretch = true
-render_target_update_mode = 0
-
-[node name="TestScene" parent="Control/SubViewportContainer/SubViewport" unique_id=1340159555 instance=ExtResource("1_p5fyt")]
-
-[node name="GameLevelContainer" parent="." unique_id=1359542513 instance=ExtResource("1_53q0u")]
+initial_screen_name = ExtResource("4_3wy1v")
