@@ -4,9 +4,59 @@
 [ext_resource type="Script" uid="uid://230dg1h8njbc" path="res://main/main.gd" id="1_pjrb6"]
 [ext_resource type="Resource" uid="uid://bss1rlawvphvy" path="res://content/screen_res/screen_container.tres" id="2_c651c"]
 [ext_resource type="Resource" uid="uid://5t3006hr6qkc" path="res://content/screen_res/initial_screen.tres" id="4_3wy1v"]
+[ext_resource type="Shader" uid="uid://bnkvih7y80437" path="res://content/shaders/transitions.gdshader" id="5_3wy1v"]
+[ext_resource type="Script" uid="uid://binqocvnwbtfh" path="res://main/transition_screen.gd" id="5_kfbq2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kfbq2"]
+shader = ExtResource("5_3wy1v")
+shader_parameter/use_sprite_alpha = true
+shader_parameter/use_transition_texture = false
+shader_parameter/transition_type = 0
+shader_parameter/position = Vector2(0.5, 0.5)
+shader_parameter/invert = true
+shader_parameter/grid_size = Vector2(5, 5)
+shader_parameter/rotation_angle = 0.0
+shader_parameter/global_x_mirror = false
+shader_parameter/global_y_mirror = false
+shader_parameter/local_x_mirror = false
+shader_parameter/local_y_mirror = false
+shader_parameter/stagger = Vector2(0, 0)
+shader_parameter/cumulative_stagger_flip = false
+shader_parameter/cumulative_stagger = Vector2(0, 0)
+shader_parameter/stagger_frequency = Vector2i(2, 2)
+shader_parameter/flip_frequency = Vector2i(1, 1)
+shader_parameter/basic_feather = 0.0
+shader_parameter/use_mask_size = false
+shader_parameter/mask_size = Vector2(100, 100)
+shader_parameter/edges = 6
+shader_parameter/shape_feather = 0.1
+shader_parameter/sectors = 1
+shader_parameter/clock_feather = 0.0
+shader_parameter/progress = 0.0
+shader_parameter/progress_bias = Vector2(10, 10)
 
 [node name="Main" type="Node" unique_id=1732081210]
 script = ExtResource("1_pjrb6")
 screens_container = ExtResource("2_c651c")
 game_level_container = ExtResource("1_53q0u")
 initial_screen_name = ExtResource("4_3wy1v")
+
+[node name="TransitionScreen" type="Control" parent="." unique_id=2047364570]
+z_index = 8
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_kfbq2")
+
+[node name="ColorRect" type="ColorRect" parent="TransitionScreen" unique_id=1196879735]
+material = SubResource("ShaderMaterial_kfbq2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

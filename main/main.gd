@@ -18,8 +18,12 @@ func transition_to(level_name: String):
 	var screen := screens_container.get_by_name(level_name)
 	assert(screen != null, "No hay escena llamada "+level_name)
 
+	await get_tree().create_timer($TransitionScreen.fade_in()).timeout
+
 	if screen.type == GameScreenResource.GameScreenType.LEVEL:
 		transition_to_level(screen)
+	
+	$TransitionScreen.fade_out()
 
 func transition_to_level(level: GameScreenResource):
 	if _current_creen:
@@ -35,4 +39,4 @@ func transition_to_level(level: GameScreenResource):
 
 func restart_current_level():
 	if _current_level:
-		transition_to_level(_current_level)
+		transition_to(_current_level.name)
