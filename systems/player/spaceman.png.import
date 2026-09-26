@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f2jak011fiyy"
-path="res://.godot/imported/greybox_tiles.png-3963b62c20bd343d6d28eac6227f0214.ctex"
+uid="uid://cpe5x6jiw4kb8"
+path="res://.godot/imported/spaceman.png-42bf99d9025d109592856938e4762173.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/greybox_tiles.png"
-dest_files=["res://.godot/imported/greybox_tiles.png-3963b62c20bd343d6d28eac6227f0214.ctex"]
+source_file="res://systems/player/spaceman.png"
+dest_files=["res://.godot/imported/spaceman.png-42bf99d9025d109592856938e4762173.ctex"]
 
 [params]
 

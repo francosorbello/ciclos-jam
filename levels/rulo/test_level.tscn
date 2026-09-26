@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://ts0y0mhx8pyw"]
-
-[ext_resource type="TileSet" uid="uid://bh5i30lof53s8" path="res://assets/art/greybox_tileset.tres" id="1_qydx4"]
-
-[node name="TestLevel" type="Node2D" unique_id=364233370]
-
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1926392800]
-tile_set = ExtResource("1_qydx4")
