@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dxbkbv1hbwxk6"]
+
+[ext_resource type="PackedScene" uid="uid://dkx2yv2tvpu2b" path="res://player/player.tscn" id="1_stypt"]
+[ext_resource type="PackedScene" uid="uid://cter2nppyjf66" path="res://utils/window_size_reference.tscn" id="2_rtd5x"]
+
+[node name="TestScene" type="Node2D" unique_id=1340159555]
+
+[node name="Player" parent="." unique_id=613483278 instance=ExtResource("1_stypt")]
+position = Vector2(73, 84)
+
+[node name="WindowSizeReference" parent="." unique_id=1121091131 instance=ExtResource("2_rtd5x")]
