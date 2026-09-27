@@ -1,13 +1,9 @@
-[gd_scene format=4 uid="uid://ts0y0mhx8pyw"]
+[gd_scene format=4 uid="uid://dyebml5x268wk"]
 
-[ext_resource type="TileSet" uid="uid://cv1l2ibsg57hh" path="res://content/art/grass_tileset.tres" id="1_m4rtj"]
-[ext_resource type="PackedScene" uid="uid://cter2nppyjf66" path="res://systems/utils/window_size_reference.tscn" id="2_yx5fw"]
-[ext_resource type="PackedScene" uid="uid://cgu1lxcm1xhde" path="res://systems/button/button.tscn" id="3_yx5fw"]
-[ext_resource type="PackedScene" uid="uid://dkx2yv2tvpu2b" path="res://systems/player/player.tscn" id="4_uh0j8"]
-[ext_resource type="PackedScene" uid="uid://d3aehi3y3q04k" path="res://systems/flag/flag.tscn" id="5_m4rtj"]
-[ext_resource type="PackedScene" uid="uid://bs7lcp85pt6c6" path="res://systems/projectile/projectile_spawner.tscn" id="6_52hsn"]
-[ext_resource type="PackedScene" uid="uid://c70m5htrqffwy" path="res://systems/door/door.tscn" id="7_ixg65"]
-[ext_resource type="PackedScene" uid="uid://c74sr606rps03" path="res://systems/box/box.tscn" id="8_jhsbs"]
+[ext_resource type="TileSet" uid="uid://cv1l2ibsg57hh" path="res://content/art/grass_tileset.tres" id="1_aki2k"]
+[ext_resource type="PackedScene" uid="uid://cter2nppyjf66" path="res://systems/utils/window_size_reference.tscn" id="2_fo1me"]
+[ext_resource type="PackedScene" uid="uid://cgu1lxcm1xhde" path="res://systems/button/button.tscn" id="3_bxiyn"]
+[ext_resource type="PackedScene" uid="uid://dkx2yv2tvpu2b" path="res://systems/player/player.tscn" id="4_dbjvk"]
 
 [node name="TestLevel" type="Node2D" unique_id=364233370]
 y_sort_enabled = true
@@ -18,47 +14,25 @@ y_sort_enabled = true
 z_index = -2
 texture_filter = 1
 tile_map_data = PackedByteArray("AAACAAUAAAAAAAEAAAACAAYAAAAAAAIAAAACAAcAAAAAAAMAAAADAAUAAAABAAEAAAADAAYAAAABAAIAAAADAAcAAAABAAMAAAAEAAUAAAACAAEAAAAEAAYAAAACAAIAAAAEAAcAAAACAAMAAAABAAcAAAACAAAAAAABAAYAAAAAAAAAAAABAAUAAAABAAAAAAAAAAUAAAACAAAAAAAAAAQAAAABAAAAAAAAAAYAAAABAAAAAAAAAAcAAAAAAAAAAAAAAAMAAAACAAAAAAABAAMAAAACAAAAAAABAAIAAAACAAMAAAABAAEAAAACAAEAAAAAAAAAAAABAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAABAAAAAAAEAAAAAAACAAAAAAAEAAEAAAABAAAAAAAEAAIAAAABAAAAAAADAAMAAAAAAAAAAAADAAQAAAABAAAAAAAEAAQAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAQAAAACAAAAAAAGAAUAAAACAAAAAAAFAAIAAAAAAAAAAAAFAAEAAAABAAAAAAAGAAEAAAAAAAEAAAAHAAEAAAABAAMAADAHAAIAAAABAAMAAAAHAAAAAAACAAAAAAAGAAAAAAAAAAAAAAAGAAIAAAAAAAMAAAAGAAMAAAABAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAABAAAAAAAHAAUAAAABAAAAAAAHAAYAAAABAAAAAAAHAAcAAAABAAAAAAAGAAcAAAACAAAAAAAGAAYAAAAAAAAAAAAFAAcAAAACAAAAAAAFAAYAAAAAAAAAAAAFAAUAAAACAAAAAAAFAAQAAAAAAAAAAAADAAIAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAADAAEAAAABAAAAAAACAAEAAAABAAAAAAABAAQAAAABAAAAAAAAAAIAAAABAAMAAAAAAAEAAAABAAEAAAACAAQAAAAAAAAAAAAFAAAAAAABAAAAAAA=")
-tile_set = ExtResource("1_m4rtj")
+tile_set = ExtResource("1_aki2k")
 
 [node name="Deco" type="TileMapLayer" parent="Tiles" unique_id=1299022810]
 z_index = -2
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAFAAAAAAADAAMAAAAFAAEAAAADAAQAAAAGAAMAAAAEAAAAAAAHAAMAAAAFAAAAAAAAAAcAAAADAAUAAAABAAcAAAAEAAIAAAACAAcAAAAEAAIAAAADAAcAAAAEAAIAAAAEAAcAAAAEAAIAAAAFAAcAAAAFAAIAAAAFAAIAAAADAAQAAAAFAAMAAAADAAUAAAAGAAQAAAAAAAQAAAA=")
-tile_set = ExtResource("1_m4rtj")
+tile_set = ExtResource("1_aki2k")
 
 [node name="Walls" type="TileMapLayer" parent="Tiles" unique_id=1926392800]
 texture_filter = 1
 tile_map_data = PackedByteArray("AAAFAAAAAAADAAMAAAAFAAEAAAADAAQAAAAGAAMAAAAEAAAAAAAHAAMAAAAFAAAAAAAAAAcAAAADAAUAAAABAAcAAAAEAAIAAAACAAcAAAAEAAIAAAADAAcAAAAEAAIAAAAEAAcAAAAEAAIAAAAFAAcAAAAFAAIAAAAFAAIAAAADAAQAAAAFAAMAAAADAAUAAAAFAAQAAAAGAAMAAAAFAAUAAAAGAAQAAAAFAAYAAAAGAAUAAAA=")
-tile_set = ExtResource("1_m4rtj")
+tile_set = ExtResource("1_aki2k")
 
-[node name="WindowSizeReference" parent="." unique_id=1121091131 instance=ExtResource("2_yx5fw")]
+[node name="WindowSizeReference" parent="." unique_id=1121091131 instance=ExtResource("2_fo1me")]
 
-[node name="Button" parent="." unique_id=1798040680 instance=ExtResource("3_yx5fw")]
+[node name="Button" parent="." unique_id=1798040680 instance=ExtResource("3_bxiyn")]
 y_sort_enabled = true
 position = Vector2(115, 30)
 connection_name = "test"
 
-[node name="Player" parent="." unique_id=613483278 instance=ExtResource("4_uh0j8")]
+[node name="Player" parent="." unique_id=613483278 instance=ExtResource("4_dbjvk")]
 position = Vector2(55, 98)
-
-[node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("5_m4rtj")]
-position = Vector2(35, 59)
-connection_name = "test"
-
-[node name="ProjectileSpawner" parent="." unique_id=1439850339 instance=ExtResource("6_52hsn")]
-position = Vector2(120, 120)
-shoot_direction = 2
-connection_name = "test"
-
-[node name="ProjectileSpawner2" parent="." unique_id=1623991705 instance=ExtResource("6_52hsn")]
-position = Vector2(53, 47)
-autostart = false
-connection_name = "test"
-
-[node name="Door" parent="." unique_id=144285717 instance=ExtResource("7_ixg65")]
-position = Vector2(24, 83)
-connection_name = "test"
-start_opened = true
-
-[node name="Box" parent="." unique_id=1010911782 instance=ExtResource("8_jhsbs")]
-position = Vector2(52, 78)
