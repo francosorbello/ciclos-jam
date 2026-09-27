@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d2dgfpm6oajd7"]
+
+[ext_resource type="Script" uid="uid://ba7hutmuho44t" path="res://systems/sfx_builder/sfx_builder_spawner.gd" id="1_dd6rq"]
+
+[node name="SFXBuilderSpawner" type="Node" unique_id=700219321]
+script = ExtResource("1_dd6rq")
