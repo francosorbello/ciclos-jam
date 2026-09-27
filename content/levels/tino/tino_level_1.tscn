@@ -2,8 +2,8 @@
 
 [ext_resource type="TileSet" uid="uid://cv1l2ibsg57hh" path="res://content/art/grass_tileset.tres" id="1_aki2k"]
 [ext_resource type="PackedScene" uid="uid://cter2nppyjf66" path="res://systems/utils/window_size_reference.tscn" id="2_fo1me"]
-[ext_resource type="PackedScene" uid="uid://cgu1lxcm1xhde" path="res://systems/button/button.tscn" id="3_bxiyn"]
 [ext_resource type="PackedScene" uid="uid://dkx2yv2tvpu2b" path="res://systems/player/player.tscn" id="4_dbjvk"]
+[ext_resource type="PackedScene" uid="uid://d3aehi3y3q04k" path="res://systems/flag/flag.tscn" id="5_ib4o6"]
 
 [node name="TestLevel" type="Node2D" unique_id=364233370]
 y_sort_enabled = true
@@ -19,20 +19,18 @@ tile_set = ExtResource("1_aki2k")
 [node name="Deco" type="TileMapLayer" parent="Tiles" unique_id=1299022810]
 z_index = -2
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAFAAAAAAADAAMAAAAFAAEAAAADAAQAAAAGAAMAAAAEAAAAAAAHAAMAAAAFAAAAAAAAAAcAAAADAAUAAAABAAcAAAAEAAIAAAACAAcAAAAEAAIAAAADAAcAAAAEAAIAAAAEAAcAAAAEAAIAAAAFAAcAAAAFAAIAAAAFAAIAAAADAAQAAAAFAAMAAAADAAUAAAAGAAQAAAAAAAQAAAA=")
+tile_map_data = PackedByteArray("AAAFAAYAAAAAAAUAAAABAAIAAAABAAUAAAAAAAYAAAACAAQAAAA=")
 tile_set = ExtResource("1_aki2k")
 
 [node name="Walls" type="TileMapLayer" parent="Tiles" unique_id=1926392800]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAFAAAAAAADAAMAAAAFAAEAAAADAAQAAAAGAAMAAAAEAAAAAAAHAAMAAAAFAAAAAAAAAAcAAAADAAUAAAABAAcAAAAEAAIAAAACAAcAAAAEAAIAAAADAAcAAAAEAAIAAAAEAAcAAAAEAAIAAAAFAAcAAAAFAAIAAAAFAAIAAAADAAQAAAAFAAMAAAADAAUAAAAFAAQAAAAGAAMAAAAFAAUAAAAGAAQAAAAFAAYAAAAGAAUAAAA=")
+tile_map_data = PackedByteArray("AAAFAAAAAAADAAAAAAAAAAcAAAAEAAAAAAABAAcAAAAEAAAAAAACAAcAAAAEAAAAAAADAAcAAAAEAAAAAAAEAAcAAAAEAAAAAAAFAAcAAAAFAAAAAAAAAAAAAAADAAAAAAABAAAAAAAEAAAAAAACAAAAAAAFAAAAAAAGAAAAAAAEAAAAAAAHAAAAAAAFAAAAAAAEAAAAAAADAAMAAAAGAAcAAAADAAAAAAAHAAcAAAAEAAAAAAAEAAEAAAADAAQAAAAEAAIAAAADAAUAAAAEAAQAAAAGAAQAAAAEAAUAAAAGAAQAAAAEAAYAAAAGAAUAAAAEAAMAAAAGAAMAAAADAAAAAAAGAAAAAAAIAAcAAAAHAAIAAAD//wcAAAAHAAIAAAD//wgAAAAHAAIAAAAAAAgAAAAHAAIAAAABAAgAAAAHAAIAAAACAAgAAAAHAAIAAAADAAgAAAAHAAIAAAAEAAgAAAAHAAIAAAAFAAgAAAAHAAIAAAAGAAgAAAAHAAIAAAAHAAgAAAAHAAIAAAAIAAgAAAAHAAIAAAAIAAAAAAAHAAIAAAAIAP//AAAHAAIAAAAHAP//AAAHAAIAAAAGAP//AAAHAAIAAAAFAP//AAAHAAIAAAAEAP//AAAHAAIAAAADAP//AAAHAAIAAAACAP//AAAHAAIAAAABAP//AAAHAAIAAAAAAP//AAAHAAIAAAD/////AAAHAAIAAAD//wAAAAAHAAIAAAA=")
 tile_set = ExtResource("1_aki2k")
 
 [node name="WindowSizeReference" parent="." unique_id=1121091131 instance=ExtResource("2_fo1me")]
 
-[node name="Button" parent="." unique_id=1798040680 instance=ExtResource("3_bxiyn")]
-y_sort_enabled = true
-position = Vector2(115, 30)
-connection_name = "test"
-
 [node name="Player" parent="." unique_id=613483278 instance=ExtResource("4_dbjvk")]
-position = Vector2(55, 98)
+position = Vector2(8, 64)
+
+[node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("5_ib4o6")]
+position = Vector2(88, 16)

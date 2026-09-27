@@ -29,14 +29,17 @@ script = ExtResource("1_rkbax")
 
 [node name="PlayerSprite" parent="." unique_id=134553868 instance=ExtResource("2_rkbax")]
 
+[node name="Sprite2D" parent="PlayerSprite" index="0" unique_id=428727782]
+position = Vector2(0, 2)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=938325746]
-position = Vector2(0, 6)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_uvvs6")
 
 [node name="PositionWrapperComponent" parent="." unique_id=1439856815 instance=ExtResource("3_fqfg4")]
 
 [node name="Hitbox" parent="." unique_id=980590889 instance=ExtResource("4_q27vv")]
+position = Vector2(0, -6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1803997671]
 shape = SubResource("CapsuleShape2D_e4lrk")
@@ -46,3 +49,5 @@ debug_color = Color(0.9541704, 0.18794864, 0.27921253, 0.41960785)
 values = SubResource("Resource_4khys")
 
 [connection signal="on_hit" from="Hitbox" to="." method="_on_hitbox_on_hit"]
+
+[editable path="PlayerSprite"]
