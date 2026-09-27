@@ -35,7 +35,7 @@ tile_set = ExtResource("1_m3kxg")
 position = Vector2(56, 56)
 
 [node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("4_xq4au")]
-position = Vector2(88, 16)
+position = Vector2(88, 29)
 next_screen_name = "tino_level_3"
 
 [node name="Door" parent="." unique_id=144285717 instance=ExtResource("5_1blm3")]
