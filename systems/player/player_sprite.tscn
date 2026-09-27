@@ -91,7 +91,9 @@ script = ExtResource("1_o6w4i")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=428727782]
 y_sort_enabled = true
 texture_filter = 1
+position = Vector2(0, 8)
 texture = ExtResource("2_xvx7f")
+offset = Vector2(0, -8)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=91172233]
 libraries/ = SubResource("AnimationLibrary_su0ct")

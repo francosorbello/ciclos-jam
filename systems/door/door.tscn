@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c70m5htrqffwy"]
+
+[ext_resource type="Texture2D" uid="uid://bv1cqgovgefd7" path="res://content/art/Sprites_Door/Sprite_DoorDownClosed.png" id="1_d1vvd"]
+[ext_resource type="Script" uid="uid://da2hhc4iyrctn" path="res://systems/door/door.gd" id="1_lxr2x"]
+[ext_resource type="Texture2D" uid="uid://r3ro8a5ok7dj" path="res://content/art/Sprites_Door/Sprite_DoorDownOpen.png" id="2_6il3i"]
+[ext_resource type="Texture2D" uid="uid://i6rhx1sgrxbi" path="res://content/art/Sprites_Door/Sprite_DoorRightOpen.png" id="4_lytug"]
+[ext_resource type="Texture2D" uid="uid://gps1b0iv37v1" path="res://content/art/Sprites_Door/Sprite_DoorRightClosed.png" id="5_1jc0r"]
+[ext_resource type="PackedScene" uid="uid://cxr37g7kjx4gx" path="res://systems/utils/interaction_toggle_component.tscn" id="6_1jc0r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvvs6"]
+size = Vector2(16, 16)
+
+[node name="Door" type="Node2D" unique_id=144285717]
+script = ExtResource("1_lxr2x")
+connection_name = null
+horizontal_open = ExtResource("2_6il3i")
+horizontal_closed = ExtResource("1_d1vvd")
+vertical_open = ExtResource("4_lytug")
+vertical_closed = ExtResource("5_1jc0r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=172517397]
+texture_filter = 1
+position = Vector2(0, 8)
+texture = ExtResource("1_d1vvd")
+offset = Vector2(0, -8)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1168791645]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2115548496]
+shape = SubResource("RectangleShape2D_uvvs6")
+
+[node name="InteractionToggleComponent" parent="." unique_id=820501649 instance=ExtResource("6_1jc0r")]
+
+[connection signal="disable" from="InteractionToggleComponent" to="." method="_on_interaction_toggle_component_disable"]
+[connection signal="enable" from="InteractionToggleComponent" to="." method="_on_interaction_toggle_component_enable"]
