@@ -37,7 +37,7 @@ position = Vector2(72, 32)
 
 [node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("4_uee5a")]
 position = Vector2(40, 109)
-next_screen_name = "tino_level_3"
+next_screen_name = "rulo_poem_3"
 
 [node name="Button" parent="." unique_id=1798040680 instance=ExtResource("6_ex242")]
 position = Vector2(112, 32)
