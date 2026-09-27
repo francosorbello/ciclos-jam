@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c70m5htrqffwy" path="res://systems/door/door.tscn" id="5_1blm3"]
 [ext_resource type="PackedScene" uid="uid://cgu1lxcm1xhde" path="res://systems/button/button.tscn" id="6_lhppe"]
 
-[node name="TestLevel" type="Node2D" unique_id=364233370]
+[node name="TinoLevel_2" type="Node2D" unique_id=364233370]
 y_sort_enabled = true
 
 [node name="Tiles" type="Node2D" parent="." unique_id=2069997876]

@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cgu1lxcm1xhde" path="res://systems/button/button.tscn" id="6_ndo82"]
 [ext_resource type="PackedScene" uid="uid://bs7lcp85pt6c6" path="res://systems/projectile/projectile_spawner.tscn" id="7_ynl3q"]
 
-[node name="TestLevel" type="Node2D" unique_id=364233370]
+[node name="TinoLevel_3" type="Node2D" unique_id=364233370]
 y_sort_enabled = true
 
 [node name="Tiles" type="Node2D" parent="." unique_id=2069997876]
@@ -22,7 +22,7 @@ tile_set = ExtResource("1_nb418")
 [node name="Deco" type="TileMapLayer" parent="Tiles" unique_id=1299022810]
 z_index = -2
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAHAAUAAAAAAAQAAAACAAQAAAABAAQAAAAAAAEAAAACAAQAAAAGAAEAAAACAAUAAAABAAYAAAABAAUAAAAGAAIAAAACAAAAAAAEAAEAAAACAAAAAAAHAAMAAAABAAAAAAA=")
+tile_map_data = PackedByteArray("AAAHAAUAAAAAAAQAAAACAAQAAAABAAQAAAAAAAEAAAACAAQAAAAGAAEAAAACAAUAAAABAAYAAAABAAUAAAAEAAEAAAACAAAAAAA=")
 tile_set = ExtResource("1_nb418")
 
 [node name="Walls" type="TileMapLayer" parent="Tiles" unique_id=1926392800]

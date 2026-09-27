@@ -22,7 +22,6 @@ tile_set = ExtResource("1_3bx73")
 [node name="Deco" type="TileMapLayer" parent="Tiles" unique_id=1299022810]
 z_index = -2
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAGAAIAAAAAAAAAAAA=")
 tile_set = ExtResource("1_3bx73")
 
 [node name="Walls" type="TileMapLayer" parent="Tiles" unique_id=1926392800]
