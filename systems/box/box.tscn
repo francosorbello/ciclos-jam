@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c74sr606rps03"]
+
+[ext_resource type="Script" uid="uid://b2ik6vyexxbtj" path="res://systems/box/box.gd" id="1_satll"]
+[ext_resource type="Texture2D" uid="uid://jwr4tt45pb02" path="res://content/art/Sprites_Box/Sprite_Box.png" id="2_hrfih"]
+[ext_resource type="PackedScene" uid="uid://dvrkx8thfj7uf" path="res://systems/damageables/hitbox.tscn" id="3_cknt8"]
+[ext_resource type="PackedScene" uid="uid://d2dgfpm6oajd7" path="res://systems/sfx_builder/sfx_builder_spawner.tscn" id="4_ixc4c"]
+[ext_resource type="Script" uid="uid://ioqwdvm8ci4v" path="res://systems/sfx_builder/sfx_builder_res.gd" id="5_f32ag"]
+[ext_resource type="AudioStream" uid="uid://syuqpxqssbxp" path="res://content/sound/explosion.wav" id="6_17554"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvvs6"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cknt8"]
+size = Vector2(16, 16)
+
+[sub_resource type="Resource" id="Resource_7sh2k"]
+script = ExtResource("5_f32ag")
+sound_effects = Array[AudioStream]([ExtResource("6_17554")])
+metadata/_custom_type_script = "uid://ioqwdvm8ci4v"
+
+[node name="Box" type="Node2D" unique_id=1010911782]
+script = ExtResource("1_satll")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1619944882]
+texture_filter = 1
+texture = ExtResource("2_hrfih")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=188414380]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=68335140]
+shape = SubResource("RectangleShape2D_uvvs6")
+
+[node name="Hitbox" parent="." unique_id=980590889 instance=ExtResource("3_cknt8")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox" unique_id=127480223]
+shape = SubResource("RectangleShape2D_cknt8")
+debug_color = Color(0.967213, 0, 0.47868943, 0.41960785)
+
+[node name="SFXBuilderSpawner" parent="." unique_id=700219321 instance=ExtResource("4_ixc4c")]
+values = SubResource("Resource_7sh2k")
+
+[connection signal="on_hit" from="Hitbox" to="." method="_on_hitbox_on_hit"]
