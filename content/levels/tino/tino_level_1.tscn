@@ -34,4 +34,4 @@ position = Vector2(8, 64)
 
 [node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("5_ib4o6")]
 position = Vector2(88, 29)
-next_screen_name = "tino_level_2"
+next_screen_name = "tino_poem_2"
