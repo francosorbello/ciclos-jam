@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PoemDialogueResource" format=3 uid="uid://q4u4hk2ebsft"]
+
+[ext_resource type="Script" uid="uid://bojrn8okdu0m7" path="res://systems/poems/poem_dialogue_res.gd" id="1_u564k"]
+
+[resource]
+script = ExtResource("1_u564k")
+lines = Array[String](["Es siempre lo mismo, repito y remato.
+Remando, corriente y vertiente, 
+la lucha de siempre, sumiso al destino.", "Me duele el camino, cambiando los aires.
+Los padres, los dias, las pieles, las carnes.", "Y es como si supiera,
+que es siempre lo mismo.
+Igual mañana es mejor."])
+metadata/_custom_type_script = "uid://bojrn8okdu0m7"

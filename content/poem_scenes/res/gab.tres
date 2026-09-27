@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PoemDialogueResource" format=3 uid="uid://1jafprk7yleh"]
+
+[ext_resource type="Script" uid="uid://bojrn8okdu0m7" path="res://systems/poems/poem_dialogue_res.gd" id="1_25a0m"]
+
+[resource]
+script = ExtResource("1_25a0m")
+lines = Array[String](["Una vez leí que a pesar de enfrentar la situación muchas veces, ese dolor nunca es el mismo.
+", "Cada vez nos alejamos un poco más y el dolor muta, cambia, se apaga.
+No deja de doler pero crecemos alrededor de ese dolor.", "Aunque la cicatriz quede, y el paisaje parezca el mismo.
+Crecimos."])
+metadata/_custom_type_script = "uid://bojrn8okdu0m7"

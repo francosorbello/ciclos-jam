@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PoemDialogueResource" format=3 uid="uid://b0gc2ofvs5hmq"]
+
+[ext_resource type="Script" uid="uid://bojrn8okdu0m7" path="res://systems/poems/poem_dialogue_res.gd" id="1_a5omb"]
+
+[resource]
+script = ExtResource("1_a5omb")
+lines = Array[String](["No quiero cambiar.
+Mi lógica cíclica me envuelve y me atrapa.", "Avanzar me retrasa.
+Pero me reconfortan mis pasos.
+Me retraso y no avanzo.", "Mi lógica cíclica me envuelve y me atrapa.
+No quiero cambiar?"])
+metadata/_custom_type_script = "uid://bojrn8okdu0m7"
