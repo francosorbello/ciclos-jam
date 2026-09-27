@@ -36,6 +36,7 @@ position = Vector2(56, 56)
 
 [node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("4_xq4au")]
 position = Vector2(88, 16)
+next_screen_name = "tino_level_3"
 
 [node name="Door" parent="." unique_id=144285717 instance=ExtResource("5_1blm3")]
 position = Vector2(8, 56)
@@ -48,5 +49,5 @@ connection_name = "door"
 door_direction = 1
 
 [node name="Button" parent="." unique_id=1798040680 instance=ExtResource("6_lhppe")]
-position = Vector2(24, 24)
+position = Vector2(24, 16)
 connection_name = "door"

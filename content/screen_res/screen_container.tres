@@ -14,17 +14,17 @@ scene = ExtResource("2_ta770")
 type = 1
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
+[sub_resource type="Resource" id="Resource_cyyqy"]
+script = ExtResource("1_ppl2w")
+name = "main_menu"
+scene = ExtResource("3_ta770")
+metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
+
 [sub_resource type="Resource" id="Resource_4f2c5"]
 script = ExtResource("1_ppl2w")
 name = "tino_level_1"
 scene = ExtResource("4_ufnpe")
 type = 1
-metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
-
-[sub_resource type="Resource" id="Resource_cyyqy"]
-script = ExtResource("1_ppl2w")
-name = "main_menu"
-scene = ExtResource("3_ta770")
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
 [sub_resource type="Resource" id="Resource_tnq12"]
@@ -36,5 +36,5 @@ metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
 [resource]
 script = ExtResource("2_e1ilv")
-screens = Array[ExtResource("1_ppl2w")]([SubResource("Resource_xwkvk"), SubResource("Resource_4f2c5"), SubResource("Resource_cyyqy"), SubResource("Resource_tnq12")])
+screens = Array[ExtResource("1_ppl2w")]([SubResource("Resource_xwkvk"), SubResource("Resource_cyyqy"), SubResource("Resource_4f2c5"), SubResource("Resource_tnq12")])
 metadata/_custom_type_script = "uid://cxo7k4wtl2a44"
