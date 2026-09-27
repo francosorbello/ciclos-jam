@@ -24,5 +24,6 @@ func _handle_animation(dir_input: Vector2):
 
 	
 func _on_hitbox_on_hit() -> void:
+	$SFXBuilderSpawner.create().run()
+	get_tree().create_timer(1).timeout.connect(func(): GlobalSignal.restart_level_requested.emit())
 	queue_free()
-	GlobalSignal.restart_level_requested.emit()

@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://d0qyskjvhx8j" path="res://systems/player/player_sprite.tscn" id="2_rkbax"]
 [ext_resource type="PackedScene" uid="uid://di1gahmpg1yjh" path="res://systems/utils/position_wrapper_component.tscn" id="3_fqfg4"]
 [ext_resource type="PackedScene" uid="uid://dvrkx8thfj7uf" path="res://systems/damageables/hitbox.tscn" id="4_q27vv"]
+[ext_resource type="PackedScene" uid="uid://d2dgfpm6oajd7" path="res://systems/sfx_builder/sfx_builder_spawner.tscn" id="5_e4lrk"]
+[ext_resource type="Script" uid="uid://ioqwdvm8ci4v" path="res://systems/sfx_builder/sfx_builder_res.gd" id="6_7n85q"]
+[ext_resource type="AudioStream" uid="uid://syuqpxqssbxp" path="res://content/sound/explosion.wav" id="7_abymp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uvvs6"]
 radius = 2.0
@@ -12,6 +15,11 @@ height = 10.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e4lrk"]
 radius = 7.0
 height = 16.0
+
+[sub_resource type="Resource" id="Resource_4khys"]
+script = ExtResource("6_7n85q")
+sound_effects = Array[AudioStream]([ExtResource("7_abymp")])
+metadata/_custom_type_script = "uid://ioqwdvm8ci4v"
 
 [node name="Player" type="CharacterBody2D" unique_id=613483278]
 collision_layer = 3
@@ -33,5 +41,8 @@ shape = SubResource("CapsuleShape2D_uvvs6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1803997671]
 shape = SubResource("CapsuleShape2D_e4lrk")
 debug_color = Color(0.9541704, 0.18794864, 0.27921253, 0.41960785)
+
+[node name="SFXBuilderSpawner" parent="." unique_id=700219321 instance=ExtResource("5_e4lrk")]
+values = SubResource("Resource_4khys")
 
 [connection signal="on_hit" from="Hitbox" to="." method="_on_hitbox_on_hit"]

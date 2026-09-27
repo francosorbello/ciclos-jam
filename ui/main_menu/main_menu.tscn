@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://b5qhsvuqx38r2"]
+
+[ext_resource type="Script" uid="uid://bbvcg01a22i0j" path="res://ui/main_menu/main_menu.gd" id="1_omy8q"]
+[ext_resource type="Texture2D" uid="uid://bf174ni1oirry" path="res://content/art/Sprites_Poems/cover.png" id="1_uhj5c"]
+[ext_resource type="Script" uid="uid://bvxq1ss3a2xcc" path="res://ui/main_menu/flower_rect.gd" id="2_mu8pm"]
+
+[sub_resource type="Gradient" id="Gradient_uhj5c"]
+colors = PackedColorArray(0.32156864, 0.29411766, 0.14117648, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_uvvs6"]
+gradient = SubResource("Gradient_uhj5c")
+
+[node name="MainMenu" type="Control" unique_id=620430107]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_omy8q")
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=191020933]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_uvvs6")
+
+[node name="FlowerRect" type="TextureRect" parent="." unique_id=268350770]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_uhj5c")
+stretch_mode = 4
+script = ExtResource("2_mu8pm")
+
+[node name="Control2" type="Control" parent="." unique_id=1720148775]
+layout_mode = 1
+anchor_left = 0.7
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2" unique_id=138544118]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Title" type="RichTextLabel" parent="Control2/VBoxContainer" unique_id=1716315227]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "[wave amp=15.0 freq=5.0 connected=1]Ciclos[/wave]"
+fit_content = true
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2/VBoxContainer" unique_id=1106698397]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="Control2/VBoxContainer/VBoxContainer" unique_id=440421714]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "JUGAR"
+alignment = 0
+
+[node name="ExitButton" type="Button" parent="Control2/VBoxContainer/VBoxContainer" unique_id=1230168285]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "SALIR"
+alignment = 0
+
+[connection signal="pressed" from="Control2/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Control2/VBoxContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

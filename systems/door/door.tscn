@@ -12,7 +12,6 @@ size = Vector2(16, 16)
 
 [node name="Door" type="Node2D" unique_id=144285717]
 script = ExtResource("1_lxr2x")
-connection_name = null
 horizontal_open = ExtResource("2_6il3i")
 horizontal_closed = ExtResource("1_d1vvd")
 vertical_open = ExtResource("4_lytug")
