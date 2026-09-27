@@ -20,6 +20,7 @@ sound_effects = Array[AudioStream]([ExtResource("5_uy12e")])
 metadata/_custom_type_script = "uid://ioqwdvm8ci4v"
 
 [node name="Projectile" type="Node2D" unique_id=1143106954]
+z_index = 1
 script = ExtResource("1_xdbd5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=231563462]
