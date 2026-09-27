@@ -44,7 +44,7 @@ position = Vector2(112, 32)
 connection_name = "on_button"
 
 [node name="ProjectileSpawner" parent="." unique_id=1439850339 instance=ExtResource("7_h64h0")]
-position = Vector2(40, 0)
+position = Vector2(40, 8)
 autostart = false
 connection_name = "on_button"
 
