@@ -45,8 +45,9 @@ position = Vector2(0, -6)
 shape = SubResource("CapsuleShape2D_e4lrk")
 debug_color = Color(0.9541704, 0.18794864, 0.27921253, 0.41960785)
 
-[node name="SFXBuilderSpawner" parent="." unique_id=700219321 instance=ExtResource("5_e4lrk")]
+[node name="SFXBuilderSpawner" parent="." unique_id=700219321 node_paths=PackedStringArray("sprite") instance=ExtResource("5_e4lrk")]
 values = SubResource("Resource_4khys")
+sprite = NodePath("../PlayerSprite/Sprite2D")
 
 [connection signal="on_hit" from="Hitbox" to="." method="_on_hitbox_on_hit"]
 

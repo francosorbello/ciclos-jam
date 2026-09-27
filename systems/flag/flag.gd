@@ -20,6 +20,8 @@ extends Node2D
 @export var disabled_texture: Texture2D
 
 func _ready() -> void:
+	if Engine.is_editor_hint():
+		return
 	$WinArea.next_screen_name = next_screen_name
 	if start_enabled:
 		enable()

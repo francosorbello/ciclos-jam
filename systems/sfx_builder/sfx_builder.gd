@@ -3,11 +3,15 @@ class_name SfxBuilder
 
 @export var values: SFXBuilderResource
 
+var fade_time: float = 0.2
+
 var particles: Array[CPUParticles2D]
 var sound_effects: Array[AudioStreamPlayer2D]
 
 var target: Node2D
 var _real_target: Node2D
+
+var _sprite: Sprite2D
 
 func set_target(t: Node2D) -> SfxBuilder:
     self.target = t
@@ -18,6 +22,15 @@ func set_target(t: Node2D) -> SfxBuilder:
 
 func set_values(v: SFXBuilderResource) -> SfxBuilder:
     values = v
+    return self
+
+func set_sprite(texture: Texture2D):
+    if _sprite:
+        _sprite.queue_free()
+    _sprite = Sprite2D.new()
+    _sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+    _sprite.texture = texture
+    add_child(_sprite)
     return self
 
 func run():
@@ -42,6 +55,10 @@ func run():
     
     for sound_player in sound_effects:
         sound_player.play()
+    
+    if _sprite != null:
+        var tween := create_tween()
+        tween.tween_property(_sprite, "modulate:a",0,fade_time)
 
     await get_tree().create_timer(5).timeout
     queue_free()

@@ -36,7 +36,8 @@ shape = SubResource("RectangleShape2D_uvvs6")
 shape = SubResource("RectangleShape2D_cknt8")
 debug_color = Color(0.967213, 0, 0.47868943, 0.41960785)
 
-[node name="SFXBuilderSpawner" parent="." unique_id=700219321 instance=ExtResource("4_ixc4c")]
+[node name="SFXBuilderSpawner" parent="." unique_id=700219321 node_paths=PackedStringArray("sprite") instance=ExtResource("4_ixc4c")]
 values = SubResource("Resource_7sh2k")
+sprite = NodePath("../Sprite2D")
 
 [connection signal="on_hit" from="Hitbox" to="." method="_on_hitbox_on_hit"]
