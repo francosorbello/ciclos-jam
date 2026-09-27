@@ -6,6 +6,10 @@
 [ext_resource type="Resource" uid="uid://5t3006hr6qkc" path="res://content/screen_res/initial_screen.tres" id="4_3wy1v"]
 [ext_resource type="Shader" uid="uid://bnkvih7y80437" path="res://content/shaders/transitions.gdshader" id="5_3wy1v"]
 [ext_resource type="Script" uid="uid://binqocvnwbtfh" path="res://main/transition_screen.gd" id="5_kfbq2"]
+[ext_resource type="Script" uid="uid://ce7to51jjqnnm" path="res://main/music_manager.gd" id="7_4dugh"]
+[ext_resource type="AudioStream" uid="uid://bap3h3kg6vrqn" path="res://content/sound/music/Wind Over The Trees.ogg" id="8_67ri8"]
+[ext_resource type="AudioStream" uid="uid://26vind7rhigh" path="res://content/sound/music/Drifting Memories.ogg" id="9_grrlh"]
+[ext_resource type="AudioStream" uid="uid://cp2pjeua14pap" path="res://content/sound/music/Sunlight Through Leaves.ogg" id="10_0i4oc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kfbq2"]
 shader = ExtResource("5_3wy1v")
@@ -60,3 +64,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="MusicManager" type="AudioStreamPlayer" parent="." unique_id=264523703]
+bus = &"MUSIC"
+script = ExtResource("7_4dugh")
+game_music = ExtResource("8_67ri8")
+poem_music = ExtResource("9_grrlh")
+main_menu_music = ExtResource("10_0i4oc")

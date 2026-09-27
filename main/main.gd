@@ -13,11 +13,13 @@ var _current_level: GameScreenResource
 func _ready() -> void:
 	transition_to(initial_screen_name.initial_screen_name)
 	GlobalSignal.restart_level_requested.connect(restart_current_level)
+	GlobalSignal.change_scene_requested.connect(transition_to)
 
 func transition_to(level_name: String):
 	var screen := screens_container.get_by_name(level_name)
 	assert(screen != null, "No hay escena llamada "+level_name)
 
+	change_music(screen.type)
 	if screen.transition_type == GameScreenResource.TransitionType.FADE:
 		await get_tree().create_timer($TransitionScreen.fade_in()).timeout
 
@@ -54,3 +56,11 @@ func transition_to_level(level: GameScreenResource):
 func restart_current_level():
 	if _current_level:
 		transition_to(_current_level.name)
+
+func change_music(type: GameScreenResource.GameScreenType):
+	match type:
+		GameScreenResource.GameScreenType.UI:
+			$MusicManager.play_poem()
+		GameScreenResource.GameScreenType.LEVEL:
+			$MusicManager.play_level()
+		
