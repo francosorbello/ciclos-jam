@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dulr6f556ql2r" path="res://content/poem_scenes/poem_base.tscn" id="1_n6g2d"]
 [ext_resource type="Resource" uid="uid://q4u4hk2ebsft" path="res://content/poem_scenes/res/rulo.tres" id="2_n6g2d"]
+[ext_resource type="Texture2D" uid="uid://bdoxl2ywm7cl8" path="res://content/art/Sprites_Poems/Sprite_Poem_3.png" id="3_tq56q"]
 
 [node name="rulp3" type="Control" unique_id=159084596]
 layout_mode = 3
@@ -16,3 +17,8 @@ layout_mode = 1
 next_scene_name = "rulo_level_2"
 poem = ExtResource("2_n6g2d")
 index = 2
+
+[node name="TextureRect" parent="PoemBase" index="1" unique_id=2001625392]
+texture = ExtResource("3_tq56q")
+
+[editable path="PoemBase"]
