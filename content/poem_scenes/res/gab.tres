@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_25a0m")
-lines = Array[String](["Una vez leí que a pesar de enfrentar la situación muchas veces, ese dolor nunca es el mismo.
+lines = Array[String](["Una vez leí que a pesar de enfrentar la situación, muchas veces ese dolor nunca es el mismo.
 ", "Cada vez nos alejamos un poco más y el dolor muta, cambia, se apaga.
 No deja de doler pero crecemos alrededor de ese dolor.", "Aunque la cicatriz quede, y el paisaje parezca el mismo.
 Crecimos."])
