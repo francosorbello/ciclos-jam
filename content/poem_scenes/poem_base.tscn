@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://du4hnv65cc8l5" path="res://content/art/Sprites_Poems/Sprite_Poem_1.png" id="1_4u633"]
 [ext_resource type="Script" uid="uid://dkbb84yessooo" path="res://content/poem_scenes/poem_base.gd" id="1_44isg"]
-[ext_resource type="Resource" uid="uid://1jafprk7yleh" path="res://content/poem_scenes/res/gab.tres" id="2_wnpjb"]
 [ext_resource type="AudioStream" uid="uid://hm1mm5mps5dn" path="res://content/sound/voice2.ogg" id="4_imwp4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4u633"]
@@ -21,8 +20,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_44isg")
-next_scene_name = "test_level"
-poem = ExtResource("2_wnpjb")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2011843797]
 layout_mode = 1
