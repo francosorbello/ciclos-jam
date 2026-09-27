@@ -15,7 +15,7 @@ enum ShootDirection {
 @export var shoot_direction: ShootDirection:
 	set(value):
 		shoot_direction = value
-		if Engine.is_editor_hint():
+		if Engine.is_editor_hint() and up_texture:
 			_set_sprite_for(_dir_to_vector(value))
 @export var autostart = false
 
@@ -76,6 +76,7 @@ func spawn_projectile():
 	new_projectile.position = _dir_to_shoot_pos(shoot_direction)
 	if override_speed:
 		new_projectile.speed = override_speed_value
+	$AudioStreamPlayer2D.play()
 
 
 func _on_interaction_toggle_component_enable() -> void:

@@ -2,15 +2,25 @@ extends Area2D
 
 @export var connection_name: String = ""
 
+@export_category("Textures")
 @export var pushed_texture: Texture2D
 @export var up_texture: Texture2D
+
+@export_category("Sound")
+@export var pushed_sound: AudioStream
+@export var up_sound: AudioStream
+
 
 var _disabled: bool = false:
 	set(new_value):
 		if new_value:
 			$Sprite2D.texture = pushed_texture
+			$AudioStreamPlayer2D.stream = pushed_sound
+			$AudioStreamPlayer2D.play()
 		else:
 			$Sprite2D.texture = up_texture
+			$AudioStreamPlayer2D.stream = up_sound
+			$AudioStreamPlayer2D.play()
 		_disabled = new_value
 		
 

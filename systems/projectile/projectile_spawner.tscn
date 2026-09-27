@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bxkhoada8kr3p" path="res://content/art/Sprites_Turrent/Sprite_TurretDown.png" id="4_0n1aa"]
 [ext_resource type="PackedScene" uid="uid://cxr37g7kjx4gx" path="res://systems/utils/interaction_toggle_component.tscn" id="6_0n1aa"]
 [ext_resource type="PackedScene" uid="uid://dvrkx8thfj7uf" path="res://systems/damageables/hitbox.tscn" id="7_tceqi"]
+[ext_resource type="AudioStream" uid="uid://dqqx44r33laok" path="res://content/sound/shoot.ogg" id="8_ucwcu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uvvs6"]
 radius = 4.0
@@ -41,6 +42,11 @@ shape = SubResource("CircleShape2D_uvvs6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=842291044]
 position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_uvvs6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1238393304]
+stream = ExtResource("8_ucwcu")
+volume_db = -10.0
+bus = &"SFX"
 
 [connection signal="timeout" from="SpawnIntervalTimer" to="." method="_on_spawn_interval_timer_timeout"]
 [connection signal="disable" from="InteractionToggleComponent" to="." method="_on_interaction_toggle_component_disable"]
