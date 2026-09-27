@@ -7,7 +7,7 @@
 [ext_resource type="Shader" uid="uid://bnkvih7y80437" path="res://content/shaders/transitions.gdshader" id="5_3wy1v"]
 [ext_resource type="Script" uid="uid://binqocvnwbtfh" path="res://main/transition_screen.gd" id="5_kfbq2"]
 [ext_resource type="Script" uid="uid://ce7to51jjqnnm" path="res://main/music_manager.gd" id="7_4dugh"]
-[ext_resource type="AudioStream" uid="uid://bap3h3kg6vrqn" path="res://content/sound/music/Wind Over The Trees.ogg" id="8_67ri8"]
+[ext_resource type="AudioStream" uid="uid://b3h4ikappsim8" path="res://content/sound/music/Music_JulyAmbient.ogg" id="8_0i4oc"]
 [ext_resource type="AudioStream" uid="uid://26vind7rhigh" path="res://content/sound/music/Drifting Memories.ogg" id="9_grrlh"]
 [ext_resource type="AudioStream" uid="uid://cp2pjeua14pap" path="res://content/sound/music/Sunlight Through Leaves.ogg" id="10_0i4oc"]
 
@@ -68,6 +68,6 @@ color = Color(0, 0, 0, 1)
 [node name="MusicManager" type="AudioStreamPlayer" parent="." unique_id=264523703]
 bus = &"MUSIC"
 script = ExtResource("7_4dugh")
-game_music = ExtResource("8_67ri8")
+game_music = ExtResource("8_0i4oc")
 poem_music = ExtResource("9_grrlh")
 main_menu_music = ExtResource("10_0i4oc")
