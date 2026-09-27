@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dkx2yv2tvpu2b" path="res://systems/player/player.tscn" id="4_dbjvk"]
 [ext_resource type="PackedScene" uid="uid://d3aehi3y3q04k" path="res://systems/flag/flag.tscn" id="5_ib4o6"]
 
-[node name="TestLevel" type="Node2D" unique_id=364233370]
+[node name="TinoLevel_1" type="Node2D" unique_id=364233370]
 y_sort_enabled = true
 
 [node name="Tiles" type="Node2D" parent="." unique_id=2069997876]
