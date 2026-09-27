@@ -43,6 +43,7 @@ position = Vector2(55, 98)
 
 [node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("5_m4rtj")]
 position = Vector2(35, 59)
+start_enabled = false
 connection_name = "test"
 
 [node name="ProjectileSpawner" parent="." unique_id=1439850339 instance=ExtResource("6_52hsn")]

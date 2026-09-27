@@ -1,26 +1,42 @@
+@tool
 extends Node2D
 
+@export_category("Flag specific")
+@export var next_screen_name: String
+@export var start_enabled: bool = true:
+	set(value):
+		start_enabled = value
+		if Engine.is_editor_hint() and enabled_texture:
+			if value:
+				$Sprite2D.texture = enabled_texture
+			else:
+				$Sprite2D.texture = disabled_texture
+
+@export_category("Connections")
 @export var connection_name: String
 
+@export_category("Sprites")
+@export var enabled_texture: Texture2D
+@export var disabled_texture: Texture2D
+
 func _ready() -> void:
-	GlobalEventSystem.suscribe(self, "_on_global_event")
-
-func toggle_to(value: bool):
-	$FlagArea/CollisionShape2D.set_deferred("disabled", not value)
-	var sprite: Sprite2D = $Sprite2D
-	if value:
-		sprite.region_rect.position.x = 0
+	$WinArea.next_screen_name = next_screen_name
+	if start_enabled:
+		enable()
 	else:
-		sprite.region_rect.position.x = 16
+		disable()
+	$InteractionToggleComponent.connection_name = connection_name
 
-func toggle():
-	toggle_to($FlagArea/CollisionShape2D.disabled)
+func enable():
+	$WinArea.enable()
+	$Sprite2D.texture = enabled_texture
 
-func _on_flag_area_body_entered(body: Node2D) -> void:
-	if body is APlayer:
-		toggle_to(false)
+func disable():
+	$WinArea.disable()
+	$Sprite2D.texture = disabled_texture
 
-func _on_global_event(event: GlobalEventSystem.GameEvent, message: Dictionary):
-	if event == GlobalEventSystem.GameEvent.GE_INTERACTION:
-		if message.get("connection") == connection_name:
-			toggle()
+func _on_interaction_toggle_component_enable() -> void:
+	enable()
+
+func _on_interaction_toggle_component_disable() -> void:
+	disable()
