@@ -1,0 +1,66 @@
+[gd_scene format=4 uid="uid://dr8g0h6opjjim"]
+
+[ext_resource type="TileSet" uid="uid://cv1l2ibsg57hh" path="res://content/art/grass_tileset.tres" id="1_qyq1w"]
+[ext_resource type="PackedScene" uid="uid://cter2nppyjf66" path="res://systems/utils/window_size_reference.tscn" id="2_jhc1u"]
+[ext_resource type="PackedScene" uid="uid://dkx2yv2tvpu2b" path="res://systems/player/player.tscn" id="3_dibkx"]
+[ext_resource type="PackedScene" uid="uid://d3aehi3y3q04k" path="res://systems/flag/flag.tscn" id="4_pfsvu"]
+[ext_resource type="PackedScene" uid="uid://c70m5htrqffwy" path="res://systems/door/door.tscn" id="5_6qsal"]
+[ext_resource type="PackedScene" uid="uid://cgu1lxcm1xhde" path="res://systems/button/button.tscn" id="6_18o2b"]
+[ext_resource type="PackedScene" uid="uid://bs7lcp85pt6c6" path="res://systems/projectile/projectile_spawner.tscn" id="7_iwhoj"]
+[ext_resource type="PackedScene" uid="uid://c74sr606rps03" path="res://systems/box/box.tscn" id="8_8rxfy"]
+
+[node name="BaseLevel" type="Node2D" unique_id=364233370]
+y_sort_enabled = true
+
+[node name="Tiles" type="Node2D" parent="." unique_id=2069997876]
+
+[node name="Floor" type="TileMapLayer" parent="Tiles" unique_id=1862876450]
+z_index = -2
+texture_filter = 1
+tile_map_data = PackedByteArray("AAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAADAAUAAAAAAAAAAAADAAYAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAYAAAAAAAAAAAAEAAcAAAAAAAAAAAABAAcAAAAAAAAAAAABAAYAAAAAAAAAAAABAAUAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAABAAIAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAYAAAAAAAAAAAAHAAcAAAAAAAAAAAAGAAYAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAQAAAAAAAAAAAADAAIAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAADAAEAAAAAAAAAAAACAAEAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAACAAQAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAcAAAAAAAAAAAAFAAcAAAAAAAAAAAAFAAYAAAAAAAAAAAA=")
+tile_set = ExtResource("1_qyq1w")
+
+[node name="Deco" type="TileMapLayer" parent="Tiles" unique_id=1299022810]
+z_index = -2
+texture_filter = 1
+tile_set = ExtResource("1_qyq1w")
+
+[node name="Walls" type="TileMapLayer" parent="Tiles" unique_id=1926392800]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAIAAMAAAAHAAIAAAAIAAQAAAAHAAIAAAAIAAUAAAAHAAIAAAAIAAYAAAAHAAIAAAAIAAcAAAAHAAIAAAAIAAgAAAAHAAIAAAAHAAgAAAAHAAIAAAAGAAgAAAAHAAIAAAAFAAgAAAAHAAIAAAAEAAgAAAAHAAIAAAADAAgAAAAHAAIAAAACAAgAAAAHAAIAAAABAAgAAAAHAAIAAAAAAAgAAAAHAAIAAAD//wgAAAAHAAIAAAD//wcAAAAHAAIAAAD//wYAAAAHAAIAAAD//wUAAAAHAAIAAAD//wQAAAAHAAIAAAD//wMAAAAHAAIAAAD//wIAAAAHAAIAAAD/////AAAHAAIAAAAAAP//AAAHAAIAAAABAP//AAAHAAIAAAACAP//AAAHAAIAAAADAP//AAAHAAIAAAAEAP//AAAHAAIAAAAFAP//AAAHAAIAAAAGAP//AAAHAAIAAAAHAP//AAAHAAIAAAAIAP//AAAHAAIAAAADAAEAAAAFAAQAAAADAAQAAAAFAAQAAAADAAcAAAAEAAAAAAAEAAIAAAAEAAAAAAAFAAIAAAAEAAAAAAAGAAIAAAAEAAAAAAAHAAIAAAADAAMAAAAEAAUAAAAEAAAAAAAFAAUAAAAEAAAAAAAGAAUAAAAEAAAAAAAHAAUAAAADAAQAAAAHAAYAAAADAAQAAAAHAAcAAAAFAAAAAAAHAAMAAAAEAAAAAAAHAAQAAAADAAQAAAAEAAcAAAAEAAAAAAAFAAcAAAAEAAAAAAAGAAcAAAAEAAAAAAAAAAcAAAADAAAAAAABAAcAAAAEAAAAAAACAAcAAAAEAAAAAAAAAAYAAAADAAQAAAAAAAUAAAADAAQAAAAAAAQAAAADAAQAAAAAAAMAAAADAAQAAAAAAAIAAAADAAMAAAAIAAIAAAAHAAIAAAA=")
+tile_set = ExtResource("1_qyq1w")
+
+[node name="WindowSizeReference" parent="." unique_id=1121091131 instance=ExtResource("2_jhc1u")]
+
+[node name="Player" parent="." unique_id=613483278 instance=ExtResource("3_dibkx")]
+position = Vector2(24, 40)
+
+[node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("4_pfsvu")]
+position = Vector2(104, 104)
+next_screen_name = "tino_level_3"
+
+[node name="Door" parent="." unique_id=144285717 instance=ExtResource("5_6qsal")]
+position = Vector2(56, 40)
+connection_name = "door_1"
+
+[node name="Door2" parent="." unique_id=2094703013 instance=ExtResource("5_6qsal")]
+position = Vector2(56, 88)
+connection_name = "door_2"
+
+[node name="Button" parent="." unique_id=1798040680 instance=ExtResource("6_18o2b")]
+position = Vector2(72, 16)
+connection_name = "door_1"
+
+[node name="Button2" parent="." unique_id=1249507135 instance=ExtResource("6_18o2b")]
+position = Vector2(104, 64)
+connection_name = "door_2"
+
+[node name="ProjectileSpawner" parent="." unique_id=1439850339 instance=ExtResource("7_iwhoj")]
+position = Vector2(56, 8)
+autostart = true
+
+[node name="Box" parent="." unique_id=1010911782 instance=ExtResource("8_8rxfy")]
+position = Vector2(56, 56)
+
+[node name="Box2" parent="." unique_id=2049086827 instance=ExtResource("8_8rxfy")]
+position = Vector2(56, 104)
