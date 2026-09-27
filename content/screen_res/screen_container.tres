@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b5qhsvuqx38r2" path="res://ui/main_menu/main_menu.tscn" id="3_ta770"]
 [ext_resource type="PackedScene" uid="uid://dyebml5x268wk" path="res://content/levels/tino/tino_level_1.tscn" id="4_ufnpe"]
 [ext_resource type="PackedScene" uid="uid://8p6n3ie0wrev" path="res://content/levels/tino/tino_level_2.tscn" id="5_sjw1o"]
+[ext_resource type="PackedScene" uid="uid://bkioa2g3kk3st" path="res://content/levels/tino/tino_level_3.tscn" id="6_tnq12"]
 
 [sub_resource type="Resource" id="Resource_xwkvk"]
 script = ExtResource("1_ppl2w")
@@ -34,7 +35,14 @@ scene = ExtResource("5_sjw1o")
 type = 1
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
+[sub_resource type="Resource" id="Resource_uq0ui"]
+script = ExtResource("1_ppl2w")
+name = "tino_level_3"
+scene = ExtResource("6_tnq12")
+type = 1
+metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
+
 [resource]
 script = ExtResource("2_e1ilv")
-screens = Array[ExtResource("1_ppl2w")]([SubResource("Resource_xwkvk"), SubResource("Resource_cyyqy"), SubResource("Resource_4f2c5"), SubResource("Resource_tnq12")])
+screens = Array[ExtResource("1_ppl2w")]([SubResource("Resource_xwkvk"), SubResource("Resource_cyyqy"), SubResource("Resource_4f2c5"), SubResource("Resource_tnq12"), SubResource("Resource_uq0ui")])
 metadata/_custom_type_script = "uid://cxo7k4wtl2a44"
