@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.36810192, 0.36810198, 0.36810192, 1)
+color = Color(0.019607844, 0.17254902, 0.13333334, 1)
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=167998368]
 texture_filter = 1
