@@ -30,5 +30,6 @@ func _process(_delta: float) -> void:
         can_exit = false
 
 func _on_text_finished():
+    $Label/Label2.show()
     can_exit = true
     play_voice_sound = false
