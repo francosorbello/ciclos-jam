@@ -10,16 +10,26 @@ var _current_screen: Node
 
 var _current_level: GameScreenResource
 
+var is_transitioning: bool = false
+
 func _ready() -> void:
 	$MusicManager.play_music()
 	transition_to(initial_screen_name.initial_screen_name)
 	GlobalSignal.restart_level_requested.connect(restart_current_level)
 	GlobalSignal.change_scene_requested.connect(transition_to)
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("restart") and _current_level:
+		restart_current_level()
+
 func transition_to(level_name: String):
+	if is_transitioning:
+		print("Already transitioning")
+		return
 	var screen := screens_container.get_by_name(level_name)
 	assert(screen != null, "No hay escena llamada "+level_name)
 
+	is_transitioning = true
 	#change_music(screen.type)
 	if screen.transition_type == GameScreenResource.TransitionType.FADE:
 		await get_tree().create_timer($TransitionScreen.fade_in()).timeout
@@ -29,8 +39,11 @@ func transition_to(level_name: String):
 	elif screen.type == GameScreenResource.GameScreenType.UI:
 		transition_to_ui(screen)
 	
+	var wait_for = 1
 	if screen.transition_type == GameScreenResource.TransitionType.FADE:	
-		$TransitionScreen.fade_out()
+		wait_for = $TransitionScreen.fade_out()
+
+	get_tree().create_timer(wait_for).timeout.connect(func(): is_transitioning = false)
 
 func transition_to_ui(ui_scene: GameScreenResource):
 	if _current_screen:

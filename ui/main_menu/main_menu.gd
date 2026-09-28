@@ -8,4 +8,6 @@ func _on_play_button_pressed() -> void:
 
 
 func _on_exit_button_pressed() -> void:
+	if  OS.get_name() == "Web":
+		return
 	get_tree().quit()

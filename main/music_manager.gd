@@ -20,6 +20,5 @@ func transition_to(song: AudioStream):
 
 func _on_transition_finished(song):
 	stop()
-	volume_db = 24
 	stream = song
 	play()
