@@ -121,9 +121,9 @@ autostart = true
 
 [node name="ProjectileSpawner3" parent="." unique_id=1071598361 instance=ExtResource("7_lotd0")]
 position = Vector2(24, 88)
-spawn_interval = 1.0
+spawn_interval = 0.2
 override_speed = true
-override_speed_value = 200.0
+override_speed_value = 300.0
 shoot_direction = 2
 autostart = true
 
@@ -137,8 +137,16 @@ autostart = true
 
 [node name="ProjectileSpawner4" parent="." unique_id=188082850 instance=ExtResource("7_lotd0")]
 position = Vector2(40, 72)
-spawn_interval = 1.0
+spawn_interval = 0.2
 override_speed = true
-override_speed_value = 200.0
+override_speed_value = 300.0
+shoot_direction = 2
+autostart = true
+
+[node name="ProjectileSpawner8" parent="." unique_id=649057662 instance=ExtResource("7_lotd0")]
+position = Vector2(24, 56)
+spawn_interval = 0.2
+override_speed = true
+override_speed_value = 300.0
 shoot_direction = 2
 autostart = true
