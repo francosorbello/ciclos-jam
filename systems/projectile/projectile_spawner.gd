@@ -80,9 +80,16 @@ func spawn_projectile():
 
 
 func _on_interaction_toggle_component_enable() -> void:
-	spawn_projectile()
-	$SpawnIntervalTimer.start(spawn_interval)
+	if autostart:
+		$SpawnIntervalTimer.stop()
+	else:
+		spawn_projectile()
+		$SpawnIntervalTimer.start(spawn_interval)
 
 
 func _on_interaction_toggle_component_disable() -> void:
-	$SpawnIntervalTimer.stop()
+	if autostart:
+		spawn_projectile()
+		$SpawnIntervalTimer.start(spawn_interval)
+	else:
+		$SpawnIntervalTimer.stop()

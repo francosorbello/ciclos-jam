@@ -27,78 +27,106 @@ tile_set = ExtResource("1_6y5mg")
 
 [node name="Walls" type="TileMapLayer" parent="Tiles" unique_id=1926392800]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAIAAMAAAAHAAIAAAADAAgAAAAHAAIAAAD//wMAAAAHAAIAAAADAP//AAAHAAIAAAADAAQAAAAFAAMAAAADAAUAAAAFAAQAAAADAAYAAAAFAAUAAAADAAAAAAAFAAMAAAADAAEAAAAFAAQAAAADAAIAAAAFAAUAAAADAAcAAAAGAAIAAAAAAAMAAAADAAIAAAABAAMAAAAEAAIAAAACAAMAAAAFAAIAAAAFAAMAAAAGAAIAAAAGAAMAAAAGAAIAAAAGAAQAAAAHAAAAAAA=")
+tile_map_data = PackedByteArray("AAAIAAMAAAAHAAIAAAADAAgAAAAHAAIAAAD//wMAAAAHAAIAAAADAP//AAAHAAIAAAADAAQAAAAFAAMAAAADAAUAAAAFAAQAAAADAAYAAAAFAAUAAAADAAAAAAAFAAMAAAADAAEAAAAFAAQAAAADAAIAAAAFAAUAAAADAAcAAAAGAAIAAAAAAAMAAAADAAIAAAABAAMAAAAEAAIAAAACAAMAAAAFAAIAAAAFAAMAAAAGAAIAAAAGAAMAAAAGAAIAAAAIAAQAAAAHAAIAAAD//wQAAAAHAAIAAAAGAAUAAAAHAAAAAAAEAAIAAAAHAAAAAAA=")
 tile_set = ExtResource("1_6y5mg")
 
 [node name="WindowSizeReference" parent="." unique_id=1121091131 instance=ExtResource("2_re7wh")]
 
 [node name="Player" parent="." unique_id=613483278 instance=ExtResource("3_l7wb4")]
-position = Vector2(24, 70)
+position = Vector2(40, 93)
 
 [node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("4_403rd")]
 position = Vector2(56, 61)
 next_screen_name = "gab_poem_3"
 connection_name = "button_2"
 
-[node name="Door" parent="." unique_id=144285717 instance=ExtResource("5_oq14g")]
-position = Vector2(-128, 42)
-connection_name = "button_1"
-
 [node name="Door5" parent="." unique_id=1161238986 instance=ExtResource("5_oq14g")]
 position = Vector2(72, 56)
 connection_name = "button_1"
 door_direction = 1
 
-[node name="Door2" parent="." unique_id=2094703013 instance=ExtResource("5_oq14g")]
-position = Vector2(104, 102)
-connection_name = "button_1"
-start_opened = true
-door_direction = 1
-
-[node name="Door6" parent="." unique_id=1001484857 instance=ExtResource("5_oq14g")]
-position = Vector2(-104, 64)
-connection_name = "button_1"
-start_opened = true
-door_direction = 1
-
 [node name="Door3" parent="." unique_id=744483651 instance=ExtResource("5_oq14g")]
-position = Vector2(40, 104)
+position = Vector2(88, 24)
 connection_name = "button_2"
 start_opened = true
+door_direction = 1
 
-[node name="Door8" parent="." unique_id=1714153335 instance=ExtResource("5_oq14g")]
-position = Vector2(24, 72)
+[node name="Door7" parent="." unique_id=1310993937 instance=ExtResource("5_oq14g")]
+position = Vector2(8, 24)
 connection_name = "button_2"
-start_opened = true
+door_direction = 1
+
+[node name="Door9" parent="." unique_id=1489095886 instance=ExtResource("5_oq14g")]
+position = Vector2(-8, 24)
+connection_name = "button_2"
+door_direction = 1
+
+[node name="Door8" parent="." unique_id=2038268882 instance=ExtResource("5_oq14g")]
+position = Vector2(136, 24)
+connection_name = "button_2"
 door_direction = 1
 
 [node name="Door4" parent="." unique_id=1224879634 instance=ExtResource("5_oq14g")]
 position = Vector2(24, 40)
 connection_name = "button_1"
 
-[node name="Door7" parent="." unique_id=617893983 instance=ExtResource("5_oq14g")]
-position = Vector2(88, 40)
+[node name="Door6" parent="." unique_id=144285717 instance=ExtResource("5_oq14g")]
+position = Vector2(24, 120)
 connection_name = "button_1"
+start_opened = true
+
+[node name="Door10" parent="." unique_id=82478059 instance=ExtResource("5_oq14g")]
+position = Vector2(24, 136)
+connection_name = "button_1"
+start_opened = true
+
+[node name="Door11" parent="." unique_id=1571317360 instance=ExtResource("5_oq14g")]
+position = Vector2(24, -8)
+connection_name = "button_1"
+start_opened = true
 
 [node name="Button" parent="." unique_id=1798040680 instance=ExtResource("6_y3pvo")]
-position = Vector2(104, 16)
+position = Vector2(104, 32)
 connection_name = "button_1"
 
 [node name="Button2" parent="." unique_id=264725991 instance=ExtResource("6_y3pvo")]
 position = Vector2(24, 96)
 connection_name = "button_2"
 
+[node name="Button3" parent="." unique_id=276992851 instance=ExtResource("6_y3pvo")]
+position = Vector2(40, 16)
+connection_name = "button_3"
+
 [node name="ProjectileSpawner2" parent="." unique_id=90345115 instance=ExtResource("7_nxsri")]
-position = Vector2(72, 102)
+position = Vector2(72, 24)
+spawn_interval = 0.2
+override_speed = true
+override_speed_value = 300.0
 shoot_direction = 3
 autostart = true
 connection_name = "button_1"
 
 [node name="ProjectileSpawner3" parent="." unique_id=1439850339 instance=ExtResource("7_nxsri")]
 position = Vector2(120, 56)
+spawn_interval = 0.2
+override_speed = true
+override_speed_value = 300.0
 shoot_direction = 2
 autostart = true
+connection_name = "button_3"
+
+[node name="ProjectileSpawner4" parent="." unique_id=1964517645 instance=ExtResource("7_nxsri")]
+position = Vector2(120, 71)
+spawn_interval = 0.2
+override_speed = true
+override_speed_value = 300.0
+shoot_direction = 2
+autostart = true
+connection_name = "button_3"
 
 [node name="ProjectileSpawner" parent="." unique_id=621073690 instance=ExtResource("7_nxsri")]
 position = Vector2(24, 22)
+spawn_interval = 0.2
+override_speed = true
+override_speed_value = 300.0
 autostart = true

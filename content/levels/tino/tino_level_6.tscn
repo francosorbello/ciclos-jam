@@ -32,7 +32,7 @@ tile_set = ExtResource("1_7hto5")
 [node name="WindowSizeReference" parent="." unique_id=1121091131 instance=ExtResource("2_0mubq")]
 
 [node name="Player" parent="." unique_id=613483278 instance=ExtResource("3_3h5g3")]
-position = Vector2(40, 62)
+position = Vector2(104, 29)
 
 [node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("4_8mi8n")]
 position = Vector2(104, 93)
@@ -40,29 +40,32 @@ next_screen_name = "rulo_poem_1"
 
 [node name="Door" parent="." unique_id=144285717 instance=ExtResource("5_ybjys")]
 position = Vector2(40, 40)
-connection_name = "door"
+connection_name = "button_1"
 start_opened = true
 
 [node name="Door4" parent="." unique_id=1675019168 instance=ExtResource("5_ybjys")]
 position = Vector2(104, 104)
-connection_name = "door"
+connection_name = "button_1"
 
 [node name="Door2" parent="." unique_id=2094703013 instance=ExtResource("5_ybjys")]
 position = Vector2(104, 72)
-connection_name = "door"
+connection_name = "button_1"
 start_opened = true
 door_direction = 1
 
 [node name="Door5" parent="." unique_id=256472167 instance=ExtResource("5_ybjys")]
 position = Vector2(72, 56)
-connection_name = "door"
+connection_name = "button_1"
 
-[node name="Door3" parent="." unique_id=744483651 instance=ExtResource("5_ybjys")]
-position = Vector2(8, 104)
-connection_name = "door"
-start_opened = true
+[node name="Door6" parent="." unique_id=1631770807 instance=ExtResource("5_ybjys")]
+position = Vector2(56, 24)
+connection_name = "button_2"
 door_direction = 1
 
 [node name="Button" parent="." unique_id=1798040680 instance=ExtResource("6_hktdd")]
 position = Vector2(88, 64)
-connection_name = "door"
+connection_name = "button_1"
+
+[node name="Button2" parent="." unique_id=1956890072 instance=ExtResource("6_hktdd")]
+position = Vector2(120, 96)
+connection_name = "button_2"

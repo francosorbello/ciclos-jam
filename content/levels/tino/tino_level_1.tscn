@@ -30,7 +30,7 @@ tile_set = ExtResource("1_aki2k")
 [node name="WindowSizeReference" parent="." unique_id=1121091131 instance=ExtResource("2_fo1me")]
 
 [node name="Player" parent="." unique_id=613483278 instance=ExtResource("4_dbjvk")]
-position = Vector2(8, 64)
+position = Vector2(8, 61)
 
 [node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("5_ib4o6")]
 position = Vector2(88, 29)

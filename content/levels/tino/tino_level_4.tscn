@@ -26,13 +26,13 @@ tile_set = ExtResource("1_v3tcf")
 
 [node name="Walls" type="TileMapLayer" parent="Tiles" unique_id=1926392800]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAEAAMAAAADAAMAAAAEAAQAAAADAAQAAAAEAAUAAAADAAUAAAAGAAUAAAABAAQAAAAAAAcAAAAAAAQAAAAGAAEAAAACAAQAAAADAAEAAAACAAUAAAAHAAEAAAAHAAAAAAAIAAEAAAAHAAIAAAD//wEAAAAHAAIAAAADAAcAAAAHAAAAAAA=")
+tile_map_data = PackedByteArray("AAAEAAMAAAADAAMAAAAEAAQAAAADAAQAAAAEAAUAAAADAAUAAAAGAAUAAAABAAQAAAAAAAcAAAAAAAQAAAAGAAEAAAACAAQAAAADAAEAAAACAAUAAAAHAAEAAAAHAAAAAAAIAAEAAAAHAAIAAAD//wEAAAAHAAIAAAADAAcAAAAHAAAAAAADAAgAAAAHAAIAAAADAP//AAAHAAIAAAA=")
 tile_set = ExtResource("1_v3tcf")
 
 [node name="WindowSizeReference" parent="." unique_id=1121091131 instance=ExtResource("2_lwsjw")]
 
 [node name="Player" parent="." unique_id=613483278 instance=ExtResource("3_hqp5m")]
-position = Vector2(56, 80)
+position = Vector2(56, 77)
 
 [node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("4_37krf")]
 position = Vector2(88, 77)
@@ -44,8 +44,20 @@ connection_name = "door"
 start_opened = true
 door_direction = 1
 
+[node name="Door9" parent="." unique_id=505365873 instance=ExtResource("5_bbtc6")]
+position = Vector2(136, 72)
+connection_name = "door"
+start_opened = true
+door_direction = 1
+
 [node name="Door7" parent="." unique_id=1898581883 instance=ExtResource("5_bbtc6")]
 position = Vector2(120, 88)
+connection_name = "door"
+start_opened = true
+door_direction = 1
+
+[node name="Door8" parent="." unique_id=1853102978 instance=ExtResource("5_bbtc6")]
+position = Vector2(136, 88)
 connection_name = "door"
 start_opened = true
 door_direction = 1
@@ -79,33 +91,54 @@ connection_name = "door"
 
 [node name="ProjectileSpawner" parent="." unique_id=1439850339 instance=ExtResource("7_lotd0")]
 position = Vector2(88, 40)
+spawn_interval = 1.0
+override_speed = true
+override_speed_value = 200.0
 autostart = true
 
 [node name="ProjectileSpawner6" parent="." unique_id=349452792 instance=ExtResource("7_lotd0")]
 position = Vector2(72, 104)
+spawn_interval = 1.0
+override_speed = true
+override_speed_value = 200.0
 autostart = true
 
 [node name="ProjectileSpawner2" parent="." unique_id=1569669875 instance=ExtResource("7_lotd0")]
 position = Vector2(88, 120)
+spawn_interval = 1.0
+override_speed = true
+override_speed_value = 200.0
 shoot_direction = 0
 autostart = true
 
 [node name="ProjectileSpawner5" parent="." unique_id=1416155022 instance=ExtResource("7_lotd0")]
 position = Vector2(40, 38)
+spawn_interval = 1.0
+override_speed = true
+override_speed_value = 200.0
 shoot_direction = 0
 autostart = true
 
 [node name="ProjectileSpawner3" parent="." unique_id=1071598361 instance=ExtResource("7_lotd0")]
 position = Vector2(24, 88)
+spawn_interval = 1.0
+override_speed = true
+override_speed_value = 200.0
 shoot_direction = 2
 autostart = true
 
 [node name="ProjectileSpawner7" parent="." unique_id=233286321 instance=ExtResource("7_lotd0")]
 position = Vector2(8, 120)
+spawn_interval = 1.0
+override_speed = true
+override_speed_value = 200.0
 shoot_direction = 3
 autostart = true
 
 [node name="ProjectileSpawner4" parent="." unique_id=188082850 instance=ExtResource("7_lotd0")]
 position = Vector2(40, 72)
+spawn_interval = 1.0
+override_speed = true
+override_speed_value = 200.0
 shoot_direction = 2
 autostart = true
