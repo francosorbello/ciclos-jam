@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="ciclos"
+config/name="Ciclos y poemas"
 run/main_scene="uid://5qhqbxof8kqa"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 run/max_fps=60

@@ -3,12 +3,41 @@
 [ext_resource type="Script" uid="uid://bbvcg01a22i0j" path="res://ui/main_menu/main_menu.gd" id="1_omy8q"]
 [ext_resource type="Texture2D" uid="uid://bf174ni1oirry" path="res://content/art/Sprites_Poems/cover.png" id="1_uhj5c"]
 [ext_resource type="Script" uid="uid://bvxq1ss3a2xcc" path="res://ui/main_menu/flower_rect.gd" id="2_mu8pm"]
+[ext_resource type="FontFile" uid="uid://cddtiodbkchnh" path="res://ui/main_menu/Isometra-Regular.ttf" id="4_i5wg5"]
 
 [sub_resource type="Gradient" id="Gradient_uhj5c"]
 colors = PackedColorArray(0.32156864, 0.29411766, 0.14117648, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_uvvs6"]
 gradient = SubResource("Gradient_uhj5c")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5wg5"]
+bg_color = Color(0.49019608, 0.43137255, 0.21176471, 0.23529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_joh67"]
+bg_color = Color(0.49019608, 0.43137255, 0.21176471, 0.23529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mijq"]
+bg_color = Color(0.3137255, 0.28627452, 0.13725491, 0.23529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w2r0d"]
+bg_color = Color(0.6514726, 0.5823131, 0.25221774, 0.39215687)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3c04x"]
+bg_color = Color(0.49102432, 0.43037468, 0.21133205, 0.23529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u184e"]
+bg_color = Color(0.3137255, 0.28627452, 0.13725491, 0.23529412)
+
+[sub_resource type="Theme" id="Theme_omy8q"]
+Button/fonts/font = ExtResource("4_i5wg5")
+Button/styles/focus = SubResource("StyleBoxFlat_i5wg5")
+Button/styles/hover = SubResource("StyleBoxFlat_joh67")
+Button/styles/normal = SubResource("StyleBoxFlat_6mijq")
+Button/styles/pressed = SubResource("StyleBoxFlat_w2r0d")
+RichTextLabel/fonts/normal_font = ExtResource("4_i5wg5")
+RichTextLabel/styles/focus = SubResource("StyleBoxFlat_3c04x")
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_u184e")
 
 [node name="MainMenu" type="Control" unique_id=620430107]
 layout_mode = 3
@@ -47,8 +76,11 @@ layout_mode = 1
 anchor_left = 0.7
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -200.0
+offset_right = 0.00048828125
 grow_horizontal = 0
 grow_vertical = 2
+offset_transform_position = Vector2(0, 55.005)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control2" unique_id=138544118]
 layout_mode = 1
@@ -57,29 +89,34 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 32
 alignment = 1
 
 [node name="Title" type="RichTextLabel" parent="Control2/VBoxContainer" unique_id=1716315227]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 70
+theme = SubResource("Theme_omy8q")
+theme_override_font_sizes/normal_font_size = 54
 bbcode_enabled = true
-text = "[wave amp=15.0 freq=5.0 connected=1]Ciclos[/wave]"
+text = "[wave amp=15.0 freq=5.0 connected=1] Ciclos y poemas[/wave]"
 fit_content = true
 vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control2/VBoxContainer" unique_id=1106698397]
 layout_mode = 2
+theme_override_constants/separation = 16
 
 [node name="PlayButton" type="Button" parent="Control2/VBoxContainer/VBoxContainer" unique_id=440421714]
 layout_mode = 2
+theme = SubResource("Theme_omy8q")
 theme_override_font_sizes/font_size = 30
-text = "  JUGAR"
+text = "   JUGAR"
 alignment = 0
 
 [node name="ExitButton" type="Button" parent="Control2/VBoxContainer/VBoxContainer" unique_id=1230168285]
 layout_mode = 2
+theme = SubResource("Theme_omy8q")
 theme_override_font_sizes/font_size = 30
-text = "  SALIR"
+text = "   SALIR"
 alignment = 0
 
 [connection signal="pressed" from="Control2/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
