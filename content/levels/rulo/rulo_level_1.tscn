@@ -36,7 +36,7 @@ tile_set = ExtResource("1_hewg7")
 position = Vector2(72, 29)
 
 [node name="Flag" parent="." unique_id=1136091313 instance=ExtResource("4_uee5a")]
-position = Vector2(40, 109)
+position = Vector2(40, 106)
 next_screen_name = "gab_poem_1"
 
 [node name="Button" parent="." unique_id=1798040680 instance=ExtResource("6_ex242")]

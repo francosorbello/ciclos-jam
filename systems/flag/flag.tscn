@@ -13,12 +13,12 @@ enabled_texture = ExtResource("2_i0520")
 disabled_texture = ExtResource("3_xweuw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1816724822]
-position = Vector2(0, -10)
+position = Vector2(0, -8)
 texture = ExtResource("2_i0520")
 region_rect = Rect2(0, 0, 16, 16)
 
 [node name="WinArea" parent="." unique_id=83842085 instance=ExtResource("3_arqmq")]
-position = Vector2(0, -5)
+position = Vector2(0, -2)
 
 [node name="InteractionToggleComponent" parent="." unique_id=820501649 instance=ExtResource("4_ug2fd")]
 
