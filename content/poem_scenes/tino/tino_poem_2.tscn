@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://000cslhemg0b"]
+
+[ext_resource type="PackedScene" uid="uid://dulr6f556ql2r" path="res://content/poem_scenes/poem_base.tscn" id="1_dmjir"]
+[ext_resource type="Resource" uid="uid://b0gc2ofvs5hmq" path="res://content/poem_scenes/res/martin.tres" id="2_td4uk"]
+
+[node name="tino2" type="Control" unique_id=159084596]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PoemBase" parent="." unique_id=2126785674 instance=ExtResource("1_dmjir")]
+layout_mode = 1
+offset_top = -2.0
+offset_bottom = -2.0
+next_scene_name = "tino_level_2"
+poem = ExtResource("2_td4uk")
+index = 1

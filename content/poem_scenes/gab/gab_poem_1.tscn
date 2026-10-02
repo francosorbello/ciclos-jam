@@ -14,7 +14,7 @@ grow_vertical = 2
 
 [node name="PoemBase" parent="." unique_id=2126785674 instance=ExtResource("1_7tyrs")]
 layout_mode = 1
-next_scene_name = "tino_level_4"
+next_scene_name = "tino_level_3"
 poem = ExtResource("2_k2jw0")
 
 [node name="TextureRect" parent="PoemBase" index="1" unique_id=2001625392]

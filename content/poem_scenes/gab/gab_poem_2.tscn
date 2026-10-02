@@ -14,7 +14,7 @@ grow_vertical = 2
 
 [node name="PoemBase" parent="." unique_id=2126785674 instance=ExtResource("1_6civ0")]
 layout_mode = 1
-next_scene_name = "tino_level_5"
+next_scene_name = "rulo_level_2"
 poem = ExtResource("2_gxd3y")
 index = 1
 

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b6iwn7tu7wtgs" path="res://systems/screen_system/game_screen_res.gd" id="1_ppl2w"]
 [ext_resource type="Script" uid="uid://cxo7k4wtl2a44" path="res://systems/screen_system/game_screen_container_res.gd" id="2_e1ilv"]
+[ext_resource type="PackedScene" uid="uid://c7bu5r764yl78" path="res://content/poem_scenes/tino/tino_poem_1.tscn" id="3_0wr18"]
 [ext_resource type="PackedScene" uid="uid://b5qhsvuqx38r2" path="res://ui/main_menu/main_menu.tscn" id="3_ta770"]
 [ext_resource type="PackedScene" uid="uid://dyebml5x268wk" path="res://content/levels/tino/tino_level_1.tscn" id="4_ufnpe"]
 [ext_resource type="PackedScene" uid="uid://8p6n3ie0wrev" path="res://content/levels/tino/tino_level_2.tscn" id="5_sjw1o"]
@@ -12,20 +13,25 @@
 [ext_resource type="PackedScene" uid="uid://c7tih5r5ju0gy" path="res://content/levels/tino/tino_level_7.tscn" id="10_qkip7"]
 [ext_resource type="PackedScene" uid="uid://hiom73dartln" path="res://content/levels/rulo/rulo_level_1.tscn" id="10_t5x2p"]
 [ext_resource type="PackedScene" uid="uid://dr8g0h6opjjim" path="res://content/levels/rulo/rulo_level_2.tscn" id="11_t5x2p"]
-[ext_resource type="PackedScene" uid="uid://cvp2gpsjvh6b6" path="res://content/poem_scenes/gab/gab_1.tscn" id="12_34e7l"]
-[ext_resource type="PackedScene" uid="uid://lnm6gh16ovgx" path="res://content/poem_scenes/gab/gab_2.tscn" id="13_0ff7o"]
-[ext_resource type="PackedScene" uid="uid://cd7bftloqj1ex" path="res://content/poem_scenes/gab/gab_3.tscn" id="14_48aua"]
-[ext_resource type="PackedScene" uid="uid://dtmatdkm7rrhr" path="res://content/poem_scenes/rulo/rulo_1.tscn" id="15_dhxm1"]
-[ext_resource type="PackedScene" uid="uid://br0prbc0bypvq" path="res://content/poem_scenes/rulo/rulo_2.tscn" id="16_htt7r"]
-[ext_resource type="PackedScene" uid="uid://cecme4gb7pyy1" path="res://content/poem_scenes/rulo/rulo_3.tscn" id="17_htt7r"]
-[ext_resource type="PackedScene" uid="uid://c7bu5r764yl78" path="res://content/poem_scenes/tino/tino_1.tscn" id="18_ng0lr"]
-[ext_resource type="PackedScene" uid="uid://000cslhemg0b" path="res://content/poem_scenes/tino/tino_2.tscn" id="19_r2xm4"]
-[ext_resource type="PackedScene" uid="uid://cmlou6nhfj5vh" path="res://content/poem_scenes/tino/tino_3.tscn" id="20_0wr18"]
+[ext_resource type="PackedScene" uid="uid://cvp2gpsjvh6b6" path="res://content/poem_scenes/gab/gab_poem_1.tscn" id="13_s8i4p"]
+[ext_resource type="PackedScene" uid="uid://lnm6gh16ovgx" path="res://content/poem_scenes/gab/gab_poem_2.tscn" id="14_vd0pf"]
+[ext_resource type="PackedScene" uid="uid://cd7bftloqj1ex" path="res://content/poem_scenes/gab/gab_poem_3.tscn" id="15_p00rn"]
+[ext_resource type="PackedScene" uid="uid://dtmatdkm7rrhr" path="res://content/poem_scenes/rulo/rulo_poem_1.tscn" id="16_04fny"]
+[ext_resource type="PackedScene" uid="uid://br0prbc0bypvq" path="res://content/poem_scenes/rulo/rulo_poem_2.tscn" id="17_pkgxi"]
+[ext_resource type="PackedScene" uid="uid://cecme4gb7pyy1" path="res://content/poem_scenes/rulo/rulo_poem_3.tscn" id="18_lafhv"]
+[ext_resource type="PackedScene" uid="uid://000cslhemg0b" path="res://content/poem_scenes/tino/tino_poem_2.tscn" id="19_p5sh6"]
+[ext_resource type="PackedScene" uid="uid://cmlou6nhfj5vh" path="res://content/poem_scenes/tino/tino_poem_3.tscn" id="20_i406b"]
 
 [sub_resource type="Resource" id="Resource_cyyqy"]
 script = ExtResource("1_ppl2w")
 name = "main_menu"
 scene = ExtResource("3_ta770")
+metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
+
+[sub_resource type="Resource" id="Resource_r2xm4"]
+script = ExtResource("1_ppl2w")
+name = "tino_poem_1"
+scene = ExtResource("3_0wr18")
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
 [sub_resource type="Resource" id="Resource_4f2c5"]
@@ -35,6 +41,12 @@ scene = ExtResource("4_ufnpe")
 type = 1
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
+[sub_resource type="Resource" id="Resource_0wr18"]
+script = ExtResource("1_ppl2w")
+name = "tino_poem_2"
+scene = ExtResource("19_p5sh6")
+metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
+
 [sub_resource type="Resource" id="Resource_tnq12"]
 script = ExtResource("1_ppl2w")
 name = "tino_level_2"
@@ -42,39 +54,10 @@ scene = ExtResource("5_sjw1o")
 type = 1
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
-[sub_resource type="Resource" id="Resource_uq0ui"]
+[sub_resource type="Resource" id="Resource_s8i4p"]
 script = ExtResource("1_ppl2w")
-name = "tino_level_3"
-scene = ExtResource("6_tnq12")
-type = 1
-metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
-
-[sub_resource type="Resource" id="Resource_0448p"]
-script = ExtResource("1_ppl2w")
-name = "tino_level_4"
-scene = ExtResource("7_uq0ui")
-type = 1
-metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
-
-[sub_resource type="Resource" id="Resource_j8r06"]
-script = ExtResource("1_ppl2w")
-name = "tino_level_5"
-scene = ExtResource("8_fk1g4")
-type = 1
-metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
-
-[sub_resource type="Resource" id="Resource_qkip7"]
-script = ExtResource("1_ppl2w")
-name = "tino_level_6"
-scene = ExtResource("9_j8r06")
-type = 1
-metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
-
-[sub_resource type="Resource" id="Resource_gaaln"]
-script = ExtResource("1_ppl2w")
-name = "tino_level_7"
-scene = ExtResource("10_qkip7")
-type = 1
+name = "tino_poem_3"
+scene = ExtResource("20_i406b")
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
 [sub_resource type="Resource" id="Resource_0i4oc"]
@@ -84,6 +67,25 @@ scene = ExtResource("10_t5x2p")
 type = 1
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
+[sub_resource type="Resource" id="Resource_0ff7o"]
+script = ExtResource("1_ppl2w")
+name = "gab_poem_1"
+scene = ExtResource("13_s8i4p")
+metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
+
+[sub_resource type="Resource" id="Resource_uq0ui"]
+script = ExtResource("1_ppl2w")
+name = "tino_level_3"
+scene = ExtResource("6_tnq12")
+type = 1
+metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
+
+[sub_resource type="Resource" id="Resource_48aua"]
+script = ExtResource("1_ppl2w")
+name = "gab_poem_2"
+scene = ExtResource("14_vd0pf")
+metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
+
 [sub_resource type="Resource" id="Resource_34e7l"]
 script = ExtResource("1_ppl2w")
 name = "rulo_level_2"
@@ -91,61 +93,59 @@ scene = ExtResource("11_t5x2p")
 type = 1
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
-[sub_resource type="Resource" id="Resource_0ff7o"]
-script = ExtResource("1_ppl2w")
-name = "gab_poem_1"
-scene = ExtResource("12_34e7l")
-metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
-
-[sub_resource type="Resource" id="Resource_48aua"]
-script = ExtResource("1_ppl2w")
-name = "gab_poem_2"
-scene = ExtResource("13_0ff7o")
-metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
-
 [sub_resource type="Resource" id="Resource_02ms8"]
 script = ExtResource("1_ppl2w")
 name = "gab_poem_3"
-scene = ExtResource("14_48aua")
+scene = ExtResource("15_p00rn")
+metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
+
+[sub_resource type="Resource" id="Resource_0448p"]
+script = ExtResource("1_ppl2w")
+name = "tino_level_4"
+scene = ExtResource("7_uq0ui")
+type = 1
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
 [sub_resource type="Resource" id="Resource_dhxm1"]
 script = ExtResource("1_ppl2w")
 name = "rulo_poem_1"
-scene = ExtResource("15_dhxm1")
+scene = ExtResource("16_04fny")
+metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
+
+[sub_resource type="Resource" id="Resource_j8r06"]
+script = ExtResource("1_ppl2w")
+name = "tino_level_5"
+scene = ExtResource("8_fk1g4")
+type = 1
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
 [sub_resource type="Resource" id="Resource_htt7r"]
 script = ExtResource("1_ppl2w")
 name = "rulo_poem_2"
-scene = ExtResource("16_htt7r")
+scene = ExtResource("17_pkgxi")
+metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
+
+[sub_resource type="Resource" id="Resource_qkip7"]
+script = ExtResource("1_ppl2w")
+name = "tino_level_6"
+scene = ExtResource("9_j8r06")
+type = 1
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
 [sub_resource type="Resource" id="Resource_ng0lr"]
 script = ExtResource("1_ppl2w")
 name = "rulo_poem_3"
-scene = ExtResource("17_htt7r")
+scene = ExtResource("18_lafhv")
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
-[sub_resource type="Resource" id="Resource_r2xm4"]
+[sub_resource type="Resource" id="Resource_gaaln"]
 script = ExtResource("1_ppl2w")
-name = "tino_poem_1"
-scene = ExtResource("18_ng0lr")
-metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
-
-[sub_resource type="Resource" id="Resource_0wr18"]
-script = ExtResource("1_ppl2w")
-name = "tino_poem_2"
-scene = ExtResource("19_r2xm4")
-metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
-
-[sub_resource type="Resource" id="Resource_s8i4p"]
-script = ExtResource("1_ppl2w")
-name = "tino_poem_3"
-scene = ExtResource("20_0wr18")
+name = "tino_level_7"
+scene = ExtResource("10_qkip7")
+type = 1
 metadata/_custom_type_script = "uid://b6iwn7tu7wtgs"
 
 [resource]
 script = ExtResource("2_e1ilv")
-screens = Array[ExtResource("1_ppl2w")]([SubResource("Resource_cyyqy"), SubResource("Resource_4f2c5"), SubResource("Resource_tnq12"), SubResource("Resource_uq0ui"), SubResource("Resource_0448p"), SubResource("Resource_j8r06"), SubResource("Resource_qkip7"), SubResource("Resource_gaaln"), SubResource("Resource_0i4oc"), SubResource("Resource_34e7l"), SubResource("Resource_0ff7o"), SubResource("Resource_48aua"), SubResource("Resource_02ms8"), SubResource("Resource_dhxm1"), SubResource("Resource_htt7r"), SubResource("Resource_ng0lr"), SubResource("Resource_r2xm4"), SubResource("Resource_0wr18"), SubResource("Resource_s8i4p")])
+screens = Array[ExtResource("1_ppl2w")]([SubResource("Resource_cyyqy"), SubResource("Resource_r2xm4"), SubResource("Resource_4f2c5"), SubResource("Resource_0wr18"), SubResource("Resource_tnq12"), SubResource("Resource_s8i4p"), SubResource("Resource_0i4oc"), SubResource("Resource_0ff7o"), SubResource("Resource_uq0ui"), SubResource("Resource_48aua"), SubResource("Resource_34e7l"), SubResource("Resource_02ms8"), SubResource("Resource_0448p"), SubResource("Resource_dhxm1"), SubResource("Resource_j8r06"), SubResource("Resource_htt7r"), SubResource("Resource_qkip7"), SubResource("Resource_ng0lr"), SubResource("Resource_gaaln")])
 metadata/_custom_type_script = "uid://cxo7k4wtl2a44"

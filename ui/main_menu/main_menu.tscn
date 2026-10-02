@@ -73,13 +73,13 @@ layout_mode = 2
 [node name="PlayButton" type="Button" parent="Control2/VBoxContainer/VBoxContainer" unique_id=440421714]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "JUGAR"
+text = "  JUGAR"
 alignment = 0
 
 [node name="ExitButton" type="Button" parent="Control2/VBoxContainer/VBoxContainer" unique_id=1230168285]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "SALIR"
+text = "  SALIR"
 alignment = 0
 
 [connection signal="pressed" from="Control2/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]

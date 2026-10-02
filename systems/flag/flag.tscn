@@ -13,7 +13,7 @@ enabled_texture = ExtResource("2_i0520")
 disabled_texture = ExtResource("3_xweuw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1816724822]
-position = Vector2(0, -5)
+position = Vector2(0, -10)
 texture = ExtResource("2_i0520")
 region_rect = Rect2(0, 0, 16, 16)
 
